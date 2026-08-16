@@ -17,7 +17,7 @@ export function pageHead(page: PageContent) {
     title: page.title,
     description: page.description,
     path: page.slug,
-    image: page.hero?.image,
+    ...(page.hero?.image ? { image: page.hero.image } : {}),
     schemas: [
       serviceSchema({
         name: page.serviceName ?? page.h1,
