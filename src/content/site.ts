@@ -143,27 +143,27 @@ export const navigation: NavGroup[] = [
   },
 ];
 
+const group = (label: string): NavLink[] =>
+  navigation.find((g) => g.label === label)?.children ?? [];
+
 export const footerColumns = [
   {
     title: "SEO Services",
-    links: navigation[0].children,
+    links: group("SEO Services"),
   },
   {
     title: "AI SEO",
-    links: navigation[1].children,
+    links: group("AI SEO"),
   },
   {
     title: "Growth",
-    links: [
-      ...navigation[2].children,
-      ...navigation[3].children,
-      ...navigation[4].children,
-    ],
+    links: [...group("Advertising"), ...group("Content"), ...group("Web Design")],
   },
   {
     title: "Company",
     links: [
-      ...navigation[5].children,
+      ...group("Company"),
+
       { label: "Privacy Policy", to: "/privacy-policy" },
       { label: "Terms of Service", to: "/terms-of-service" },
       { label: "Sitemap", to: "/sitemap" },
