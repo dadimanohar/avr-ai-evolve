@@ -10,33 +10,249 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AiSeoIndexRouteImport } from './routes/ai-seo/index'
+import { Route as AiSeoAiCitationsMentionsRouteImport } from './routes/ai-seo/ai-citations-mentions'
+import { Route as AiSeoAiOverviewsRouteImport } from './routes/ai-seo/ai-overviews'
+import { Route as AiSeoAiRetrievalSystemsRouteImport } from './routes/ai-seo/ai-retrieval-systems'
+import { Route as AiSeoAiVisibilityRouteImport } from './routes/ai-seo/ai-visibility'
+import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-seo/answer-engine-optimization'
+import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
+import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
+import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as SeoServicesIndexRouteImport } from './routes/seo-services/index'
+import { Route as SeoServicesGeoTargetingSeoRouteImport } from './routes/seo-services/geo-targeting-seo'
+import { Route as SeoServicesGlobalSeoRouteImport } from './routes/seo-services/global-seo'
+import { Route as SeoServicesLocalCitationsGmbRouteImport } from './routes/seo-services/local-citations-gmb'
+import { Route as SeoServicesLocalSeoRouteImport } from './routes/seo-services/local-seo'
+import { Route as SeoServicesTechnicalSeoRouteImport } from './routes/seo-services/technical-seo'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoIndexRoute = AiSeoIndexRouteImport.update({
+  id: '/ai-seo/',
+  path: '/ai-seo/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoAiCitationsMentionsRoute =
+  AiSeoAiCitationsMentionsRouteImport.update({
+    id: '/ai-seo/ai-citations-mentions',
+    path: '/ai-seo/ai-citations-mentions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AiSeoAiOverviewsRoute = AiSeoAiOverviewsRouteImport.update({
+  id: '/ai-seo/ai-overviews',
+  path: '/ai-seo/ai-overviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoAiRetrievalSystemsRoute = AiSeoAiRetrievalSystemsRouteImport.update({
+  id: '/ai-seo/ai-retrieval-systems',
+  path: '/ai-seo/ai-retrieval-systems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoAiVisibilityRoute = AiSeoAiVisibilityRouteImport.update({
+  id: '/ai-seo/ai-visibility',
+  path: '/ai-seo/ai-visibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoAnswerEngineOptimizationRoute =
+  AiSeoAnswerEngineOptimizationRouteImport.update({
+    id: '/ai-seo/answer-engine-optimization',
+    path: '/ai-seo/answer-engine-optimization',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AiSeoGeoSeoRoute = AiSeoGeoSeoRouteImport.update({
+  id: '/ai-seo/geo-seo',
+  path: '/ai-seo/geo-seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoLlmSeoRoute = AiSeoLlmSeoRouteImport.update({
+  id: '/ai-seo/llm-seo',
+  path: '/ai-seo/llm-seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
+  id: '/ai-seo/llmo',
+  path: '/ai-seo/llmo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoServicesIndexRoute = SeoServicesIndexRouteImport.update({
+  id: '/seo-services/',
+  path: '/seo-services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoServicesGeoTargetingSeoRoute =
+  SeoServicesGeoTargetingSeoRouteImport.update({
+    id: '/seo-services/geo-targeting-seo',
+    path: '/seo-services/geo-targeting-seo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SeoServicesGlobalSeoRoute = SeoServicesGlobalSeoRouteImport.update({
+  id: '/seo-services/global-seo',
+  path: '/seo-services/global-seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoServicesLocalCitationsGmbRoute =
+  SeoServicesLocalCitationsGmbRouteImport.update({
+    id: '/seo-services/local-citations-gmb',
+    path: '/seo-services/local-citations-gmb',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SeoServicesLocalSeoRoute = SeoServicesLocalSeoRouteImport.update({
+  id: '/seo-services/local-seo',
+  path: '/seo-services/local-seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoServicesTechnicalSeoRoute = SeoServicesTechnicalSeoRouteImport.update({
+  id: '/seo-services/technical-seo',
+  path: '/seo-services/technical-seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
+  '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
+  '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
+  '/ai-seo/ai-visibility': typeof AiSeoAiVisibilityRoute
+  '/ai-seo/answer-engine-optimization': typeof AiSeoAnswerEngineOptimizationRoute
+  '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
+  '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
+  '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/seo-services/geo-targeting-seo': typeof SeoServicesGeoTargetingSeoRoute
+  '/seo-services/global-seo': typeof SeoServicesGlobalSeoRoute
+  '/seo-services/local-citations-gmb': typeof SeoServicesLocalCitationsGmbRoute
+  '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
+  '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
+  '/ai-seo/': typeof AiSeoIndexRoute
+  '/seo-services/': typeof SeoServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
+  '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
+  '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
+  '/ai-seo/ai-visibility': typeof AiSeoAiVisibilityRoute
+  '/ai-seo/answer-engine-optimization': typeof AiSeoAnswerEngineOptimizationRoute
+  '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
+  '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
+  '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/seo-services/geo-targeting-seo': typeof SeoServicesGeoTargetingSeoRoute
+  '/seo-services/global-seo': typeof SeoServicesGlobalSeoRoute
+  '/seo-services/local-citations-gmb': typeof SeoServicesLocalCitationsGmbRoute
+  '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
+  '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
+  '/ai-seo': typeof AiSeoIndexRoute
+  '/seo-services': typeof SeoServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
+  '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
+  '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
+  '/ai-seo/ai-visibility': typeof AiSeoAiVisibilityRoute
+  '/ai-seo/answer-engine-optimization': typeof AiSeoAnswerEngineOptimizationRoute
+  '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
+  '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
+  '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/seo-services/geo-targeting-seo': typeof SeoServicesGeoTargetingSeoRoute
+  '/seo-services/global-seo': typeof SeoServicesGlobalSeoRoute
+  '/seo-services/local-citations-gmb': typeof SeoServicesLocalCitationsGmbRoute
+  '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
+  '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
+  '/ai-seo/': typeof AiSeoIndexRoute
+  '/seo-services/': typeof SeoServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/ai-seo/ai-citations-mentions'
+    | '/ai-seo/ai-overviews'
+    | '/ai-seo/ai-retrieval-systems'
+    | '/ai-seo/ai-visibility'
+    | '/ai-seo/answer-engine-optimization'
+    | '/ai-seo/geo-seo'
+    | '/ai-seo/llm-seo'
+    | '/ai-seo/llmo'
+    | '/seo-services/geo-targeting-seo'
+    | '/seo-services/global-seo'
+    | '/seo-services/local-citations-gmb'
+    | '/seo-services/local-seo'
+    | '/seo-services/technical-seo'
+    | '/ai-seo/'
+    | '/seo-services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/ai-seo/ai-citations-mentions'
+    | '/ai-seo/ai-overviews'
+    | '/ai-seo/ai-retrieval-systems'
+    | '/ai-seo/ai-visibility'
+    | '/ai-seo/answer-engine-optimization'
+    | '/ai-seo/geo-seo'
+    | '/ai-seo/llm-seo'
+    | '/ai-seo/llmo'
+    | '/seo-services/geo-targeting-seo'
+    | '/seo-services/global-seo'
+    | '/seo-services/local-citations-gmb'
+    | '/seo-services/local-seo'
+    | '/seo-services/technical-seo'
+    | '/ai-seo'
+    | '/seo-services'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/ai-seo/ai-citations-mentions'
+    | '/ai-seo/ai-overviews'
+    | '/ai-seo/ai-retrieval-systems'
+    | '/ai-seo/ai-visibility'
+    | '/ai-seo/answer-engine-optimization'
+    | '/ai-seo/geo-seo'
+    | '/ai-seo/llm-seo'
+    | '/ai-seo/llmo'
+    | '/seo-services/geo-targeting-seo'
+    | '/seo-services/global-seo'
+    | '/seo-services/local-citations-gmb'
+    | '/seo-services/local-seo'
+    | '/seo-services/technical-seo'
+    | '/ai-seo/'
+    | '/seo-services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  AiSeoAiCitationsMentionsRoute: typeof AiSeoAiCitationsMentionsRoute
+  AiSeoAiOverviewsRoute: typeof AiSeoAiOverviewsRoute
+  AiSeoAiRetrievalSystemsRoute: typeof AiSeoAiRetrievalSystemsRoute
+  AiSeoAiVisibilityRoute: typeof AiSeoAiVisibilityRoute
+  AiSeoAnswerEngineOptimizationRoute: typeof AiSeoAnswerEngineOptimizationRoute
+  AiSeoGeoSeoRoute: typeof AiSeoGeoSeoRoute
+  AiSeoLlmSeoRoute: typeof AiSeoLlmSeoRoute
+  AiSeoLlmoRoute: typeof AiSeoLlmoRoute
+  SeoServicesGeoTargetingSeoRoute: typeof SeoServicesGeoTargetingSeoRoute
+  SeoServicesGlobalSeoRoute: typeof SeoServicesGlobalSeoRoute
+  SeoServicesLocalCitationsGmbRoute: typeof SeoServicesLocalCitationsGmbRoute
+  SeoServicesLocalSeoRoute: typeof SeoServicesLocalSeoRoute
+  SeoServicesTechnicalSeoRoute: typeof SeoServicesTechnicalSeoRoute
+  AiSeoIndexRoute: typeof AiSeoIndexRoute
+  SeoServicesIndexRoute: typeof SeoServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +264,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/': {
+      id: '/ai-seo/'
+      path: '/ai-seo'
+      fullPath: '/ai-seo/'
+      preLoaderRoute: typeof AiSeoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/ai-citations-mentions': {
+      id: '/ai-seo/ai-citations-mentions'
+      path: '/ai-seo/ai-citations-mentions'
+      fullPath: '/ai-seo/ai-citations-mentions'
+      preLoaderRoute: typeof AiSeoAiCitationsMentionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/ai-overviews': {
+      id: '/ai-seo/ai-overviews'
+      path: '/ai-seo/ai-overviews'
+      fullPath: '/ai-seo/ai-overviews'
+      preLoaderRoute: typeof AiSeoAiOverviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/ai-retrieval-systems': {
+      id: '/ai-seo/ai-retrieval-systems'
+      path: '/ai-seo/ai-retrieval-systems'
+      fullPath: '/ai-seo/ai-retrieval-systems'
+      preLoaderRoute: typeof AiSeoAiRetrievalSystemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/ai-visibility': {
+      id: '/ai-seo/ai-visibility'
+      path: '/ai-seo/ai-visibility'
+      fullPath: '/ai-seo/ai-visibility'
+      preLoaderRoute: typeof AiSeoAiVisibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/answer-engine-optimization': {
+      id: '/ai-seo/answer-engine-optimization'
+      path: '/ai-seo/answer-engine-optimization'
+      fullPath: '/ai-seo/answer-engine-optimization'
+      preLoaderRoute: typeof AiSeoAnswerEngineOptimizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/geo-seo': {
+      id: '/ai-seo/geo-seo'
+      path: '/ai-seo/geo-seo'
+      fullPath: '/ai-seo/geo-seo'
+      preLoaderRoute: typeof AiSeoGeoSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/llm-seo': {
+      id: '/ai-seo/llm-seo'
+      path: '/ai-seo/llm-seo'
+      fullPath: '/ai-seo/llm-seo'
+      preLoaderRoute: typeof AiSeoLlmSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-seo/llmo': {
+      id: '/ai-seo/llmo'
+      path: '/ai-seo/llmo'
+      fullPath: '/ai-seo/llmo'
+      preLoaderRoute: typeof AiSeoLlmoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-services/': {
+      id: '/seo-services/'
+      path: '/seo-services'
+      fullPath: '/seo-services/'
+      preLoaderRoute: typeof SeoServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-services/geo-targeting-seo': {
+      id: '/seo-services/geo-targeting-seo'
+      path: '/seo-services/geo-targeting-seo'
+      fullPath: '/seo-services/geo-targeting-seo'
+      preLoaderRoute: typeof SeoServicesGeoTargetingSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-services/global-seo': {
+      id: '/seo-services/global-seo'
+      path: '/seo-services/global-seo'
+      fullPath: '/seo-services/global-seo'
+      preLoaderRoute: typeof SeoServicesGlobalSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-services/local-citations-gmb': {
+      id: '/seo-services/local-citations-gmb'
+      path: '/seo-services/local-citations-gmb'
+      fullPath: '/seo-services/local-citations-gmb'
+      preLoaderRoute: typeof SeoServicesLocalCitationsGmbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-services/local-seo': {
+      id: '/seo-services/local-seo'
+      path: '/seo-services/local-seo'
+      fullPath: '/seo-services/local-seo'
+      preLoaderRoute: typeof SeoServicesLocalSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-services/technical-seo': {
+      id: '/seo-services/technical-seo'
+      path: '/seo-services/technical-seo'
+      fullPath: '/seo-services/technical-seo'
+      preLoaderRoute: typeof SeoServicesTechnicalSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  AiSeoAiCitationsMentionsRoute: AiSeoAiCitationsMentionsRoute,
+  AiSeoAiOverviewsRoute: AiSeoAiOverviewsRoute,
+  AiSeoAiRetrievalSystemsRoute: AiSeoAiRetrievalSystemsRoute,
+  AiSeoAiVisibilityRoute: AiSeoAiVisibilityRoute,
+  AiSeoAnswerEngineOptimizationRoute: AiSeoAnswerEngineOptimizationRoute,
+  AiSeoGeoSeoRoute: AiSeoGeoSeoRoute,
+  AiSeoLlmSeoRoute: AiSeoLlmSeoRoute,
+  AiSeoLlmoRoute: AiSeoLlmoRoute,
+  SeoServicesGeoTargetingSeoRoute: SeoServicesGeoTargetingSeoRoute,
+  SeoServicesGlobalSeoRoute: SeoServicesGlobalSeoRoute,
+  SeoServicesLocalCitationsGmbRoute: SeoServicesLocalCitationsGmbRoute,
+  SeoServicesLocalSeoRoute: SeoServicesLocalSeoRoute,
+  SeoServicesTechnicalSeoRoute: SeoServicesTechnicalSeoRoute,
+  AiSeoIndexRoute: AiSeoIndexRoute,
+  SeoServicesIndexRoute: SeoServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
