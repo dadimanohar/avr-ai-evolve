@@ -20,12 +20,22 @@ import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-s
 import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
 import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
 import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as ContentMarketingIndexRouteImport } from './routes/content-marketing/index'
+import { Route as ContentMarketingBloggingCopywritingRouteImport } from './routes/content-marketing/blogging-copywriting'
+import { Route as ContentMarketingGuestPostingLinkBuildingRouteImport } from './routes/content-marketing/guest-posting-link-building'
+import { Route as PaidAdvertisingIndexRouteImport } from './routes/paid-advertising/index'
+import { Route as PaidAdvertisingGoogleAdsRouteImport } from './routes/paid-advertising/google-ads'
+import { Route as PaidAdvertisingSocialMediaAdsRouteImport } from './routes/paid-advertising/social-media-ads'
+import { Route as PaidAdvertisingSocialMediaMarketingRouteImport } from './routes/paid-advertising/social-media-marketing'
 import { Route as SeoServicesIndexRouteImport } from './routes/seo-services/index'
 import { Route as SeoServicesGeoTargetingSeoRouteImport } from './routes/seo-services/geo-targeting-seo'
 import { Route as SeoServicesGlobalSeoRouteImport } from './routes/seo-services/global-seo'
 import { Route as SeoServicesLocalCitationsGmbRouteImport } from './routes/seo-services/local-citations-gmb'
 import { Route as SeoServicesLocalSeoRouteImport } from './routes/seo-services/local-seo'
 import { Route as SeoServicesTechnicalSeoRouteImport } from './routes/seo-services/technical-seo'
+import { Route as WebDesignDevelopmentIndexRouteImport } from './routes/web-design-development/index'
+import { Route as WebDesignDevelopmentEcommerceDevelopmentRouteImport } from './routes/web-design-development/ecommerce-development'
+import { Route as WebDesignDevelopmentWordpressDevelopmentRouteImport } from './routes/web-design-development/wordpress-development'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -84,6 +94,46 @@ const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
   path: '/ai-seo/llmo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContentMarketingIndexRoute = ContentMarketingIndexRouteImport.update({
+  id: '/content-marketing/',
+  path: '/content-marketing/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContentMarketingBloggingCopywritingRoute =
+  ContentMarketingBloggingCopywritingRouteImport.update({
+    id: '/content-marketing/blogging-copywriting',
+    path: '/content-marketing/blogging-copywriting',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ContentMarketingGuestPostingLinkBuildingRoute =
+  ContentMarketingGuestPostingLinkBuildingRouteImport.update({
+    id: '/content-marketing/guest-posting-link-building',
+    path: '/content-marketing/guest-posting-link-building',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PaidAdvertisingIndexRoute = PaidAdvertisingIndexRouteImport.update({
+  id: '/paid-advertising/',
+  path: '/paid-advertising/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaidAdvertisingGoogleAdsRoute =
+  PaidAdvertisingGoogleAdsRouteImport.update({
+    id: '/paid-advertising/google-ads',
+    path: '/paid-advertising/google-ads',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PaidAdvertisingSocialMediaAdsRoute =
+  PaidAdvertisingSocialMediaAdsRouteImport.update({
+    id: '/paid-advertising/social-media-ads',
+    path: '/paid-advertising/social-media-ads',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PaidAdvertisingSocialMediaMarketingRoute =
+  PaidAdvertisingSocialMediaMarketingRouteImport.update({
+    id: '/paid-advertising/social-media-marketing',
+    path: '/paid-advertising/social-media-marketing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SeoServicesIndexRoute = SeoServicesIndexRouteImport.update({
   id: '/seo-services/',
   path: '/seo-services/',
@@ -116,6 +166,24 @@ const SeoServicesTechnicalSeoRoute = SeoServicesTechnicalSeoRouteImport.update({
   path: '/seo-services/technical-seo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WebDesignDevelopmentIndexRoute =
+  WebDesignDevelopmentIndexRouteImport.update({
+    id: '/web-design-development/',
+    path: '/web-design-development/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const WebDesignDevelopmentEcommerceDevelopmentRoute =
+  WebDesignDevelopmentEcommerceDevelopmentRouteImport.update({
+    id: '/web-design-development/ecommerce-development',
+    path: '/web-design-development/ecommerce-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const WebDesignDevelopmentWordpressDevelopmentRoute =
+  WebDesignDevelopmentWordpressDevelopmentRouteImport.update({
+    id: '/web-design-development/wordpress-development',
+    path: '/web-design-development/wordpress-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -128,13 +196,23 @@ export interface FileRoutesByFullPath {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
+  '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
+  '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
+  '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
+  '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
   '/seo-services/geo-targeting-seo': typeof SeoServicesGeoTargetingSeoRoute
   '/seo-services/global-seo': typeof SeoServicesGlobalSeoRoute
   '/seo-services/local-citations-gmb': typeof SeoServicesLocalCitationsGmbRoute
   '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
   '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
+  '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/content-marketing/': typeof ContentMarketingIndexRoute
+  '/paid-advertising/': typeof PaidAdvertisingIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
+  '/web-design-development/': typeof WebDesignDevelopmentIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -147,13 +225,23 @@ export interface FileRoutesByTo {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
+  '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
+  '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
+  '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
+  '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
   '/seo-services/geo-targeting-seo': typeof SeoServicesGeoTargetingSeoRoute
   '/seo-services/global-seo': typeof SeoServicesGlobalSeoRoute
   '/seo-services/local-citations-gmb': typeof SeoServicesLocalCitationsGmbRoute
   '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
   '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
+  '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo': typeof AiSeoIndexRoute
+  '/content-marketing': typeof ContentMarketingIndexRoute
+  '/paid-advertising': typeof PaidAdvertisingIndexRoute
   '/seo-services': typeof SeoServicesIndexRoute
+  '/web-design-development': typeof WebDesignDevelopmentIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -167,13 +255,23 @@ export interface FileRoutesById {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
+  '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
+  '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
+  '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
+  '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
   '/seo-services/geo-targeting-seo': typeof SeoServicesGeoTargetingSeoRoute
   '/seo-services/global-seo': typeof SeoServicesGlobalSeoRoute
   '/seo-services/local-citations-gmb': typeof SeoServicesLocalCitationsGmbRoute
   '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
   '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
+  '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/content-marketing/': typeof ContentMarketingIndexRoute
+  '/paid-advertising/': typeof PaidAdvertisingIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
+  '/web-design-development/': typeof WebDesignDevelopmentIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -188,13 +286,23 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/content-marketing/blogging-copywriting'
+    | '/content-marketing/guest-posting-link-building'
+    | '/paid-advertising/google-ads'
+    | '/paid-advertising/social-media-ads'
+    | '/paid-advertising/social-media-marketing'
     | '/seo-services/geo-targeting-seo'
     | '/seo-services/global-seo'
     | '/seo-services/local-citations-gmb'
     | '/seo-services/local-seo'
     | '/seo-services/technical-seo'
+    | '/web-design-development/ecommerce-development'
+    | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/content-marketing/'
+    | '/paid-advertising/'
     | '/seo-services/'
+    | '/web-design-development/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -207,13 +315,23 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/content-marketing/blogging-copywriting'
+    | '/content-marketing/guest-posting-link-building'
+    | '/paid-advertising/google-ads'
+    | '/paid-advertising/social-media-ads'
+    | '/paid-advertising/social-media-marketing'
     | '/seo-services/geo-targeting-seo'
     | '/seo-services/global-seo'
     | '/seo-services/local-citations-gmb'
     | '/seo-services/local-seo'
     | '/seo-services/technical-seo'
+    | '/web-design-development/ecommerce-development'
+    | '/web-design-development/wordpress-development'
     | '/ai-seo'
+    | '/content-marketing'
+    | '/paid-advertising'
     | '/seo-services'
+    | '/web-design-development'
   id:
     | '__root__'
     | '/'
@@ -226,13 +344,23 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/content-marketing/blogging-copywriting'
+    | '/content-marketing/guest-posting-link-building'
+    | '/paid-advertising/google-ads'
+    | '/paid-advertising/social-media-ads'
+    | '/paid-advertising/social-media-marketing'
     | '/seo-services/geo-targeting-seo'
     | '/seo-services/global-seo'
     | '/seo-services/local-citations-gmb'
     | '/seo-services/local-seo'
     | '/seo-services/technical-seo'
+    | '/web-design-development/ecommerce-development'
+    | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/content-marketing/'
+    | '/paid-advertising/'
     | '/seo-services/'
+    | '/web-design-development/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -246,13 +374,23 @@ export interface RootRouteChildren {
   AiSeoGeoSeoRoute: typeof AiSeoGeoSeoRoute
   AiSeoLlmSeoRoute: typeof AiSeoLlmSeoRoute
   AiSeoLlmoRoute: typeof AiSeoLlmoRoute
+  ContentMarketingBloggingCopywritingRoute: typeof ContentMarketingBloggingCopywritingRoute
+  ContentMarketingGuestPostingLinkBuildingRoute: typeof ContentMarketingGuestPostingLinkBuildingRoute
+  PaidAdvertisingGoogleAdsRoute: typeof PaidAdvertisingGoogleAdsRoute
+  PaidAdvertisingSocialMediaAdsRoute: typeof PaidAdvertisingSocialMediaAdsRoute
+  PaidAdvertisingSocialMediaMarketingRoute: typeof PaidAdvertisingSocialMediaMarketingRoute
   SeoServicesGeoTargetingSeoRoute: typeof SeoServicesGeoTargetingSeoRoute
   SeoServicesGlobalSeoRoute: typeof SeoServicesGlobalSeoRoute
   SeoServicesLocalCitationsGmbRoute: typeof SeoServicesLocalCitationsGmbRoute
   SeoServicesLocalSeoRoute: typeof SeoServicesLocalSeoRoute
   SeoServicesTechnicalSeoRoute: typeof SeoServicesTechnicalSeoRoute
+  WebDesignDevelopmentEcommerceDevelopmentRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  WebDesignDevelopmentWordpressDevelopmentRoute: typeof WebDesignDevelopmentWordpressDevelopmentRoute
   AiSeoIndexRoute: typeof AiSeoIndexRoute
+  ContentMarketingIndexRoute: typeof ContentMarketingIndexRoute
+  PaidAdvertisingIndexRoute: typeof PaidAdvertisingIndexRoute
   SeoServicesIndexRoute: typeof SeoServicesIndexRoute
+  WebDesignDevelopmentIndexRoute: typeof WebDesignDevelopmentIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -334,6 +472,55 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiSeoLlmoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/content-marketing/': {
+      id: '/content-marketing/'
+      path: '/content-marketing'
+      fullPath: '/content-marketing/'
+      preLoaderRoute: typeof ContentMarketingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/content-marketing/blogging-copywriting': {
+      id: '/content-marketing/blogging-copywriting'
+      path: '/content-marketing/blogging-copywriting'
+      fullPath: '/content-marketing/blogging-copywriting'
+      preLoaderRoute: typeof ContentMarketingBloggingCopywritingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/content-marketing/guest-posting-link-building': {
+      id: '/content-marketing/guest-posting-link-building'
+      path: '/content-marketing/guest-posting-link-building'
+      fullPath: '/content-marketing/guest-posting-link-building'
+      preLoaderRoute: typeof ContentMarketingGuestPostingLinkBuildingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paid-advertising/': {
+      id: '/paid-advertising/'
+      path: '/paid-advertising'
+      fullPath: '/paid-advertising/'
+      preLoaderRoute: typeof PaidAdvertisingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paid-advertising/google-ads': {
+      id: '/paid-advertising/google-ads'
+      path: '/paid-advertising/google-ads'
+      fullPath: '/paid-advertising/google-ads'
+      preLoaderRoute: typeof PaidAdvertisingGoogleAdsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paid-advertising/social-media-ads': {
+      id: '/paid-advertising/social-media-ads'
+      path: '/paid-advertising/social-media-ads'
+      fullPath: '/paid-advertising/social-media-ads'
+      preLoaderRoute: typeof PaidAdvertisingSocialMediaAdsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paid-advertising/social-media-marketing': {
+      id: '/paid-advertising/social-media-marketing'
+      path: '/paid-advertising/social-media-marketing'
+      fullPath: '/paid-advertising/social-media-marketing'
+      preLoaderRoute: typeof PaidAdvertisingSocialMediaMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/seo-services/': {
       id: '/seo-services/'
       path: '/seo-services'
@@ -376,6 +563,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SeoServicesTechnicalSeoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/web-design-development/': {
+      id: '/web-design-development/'
+      path: '/web-design-development'
+      fullPath: '/web-design-development/'
+      preLoaderRoute: typeof WebDesignDevelopmentIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/web-design-development/ecommerce-development': {
+      id: '/web-design-development/ecommerce-development'
+      path: '/web-design-development/ecommerce-development'
+      fullPath: '/web-design-development/ecommerce-development'
+      preLoaderRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/web-design-development/wordpress-development': {
+      id: '/web-design-development/wordpress-development'
+      path: '/web-design-development/wordpress-development'
+      fullPath: '/web-design-development/wordpress-development'
+      preLoaderRoute: typeof WebDesignDevelopmentWordpressDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -390,13 +598,28 @@ const rootRouteChildren: RootRouteChildren = {
   AiSeoGeoSeoRoute: AiSeoGeoSeoRoute,
   AiSeoLlmSeoRoute: AiSeoLlmSeoRoute,
   AiSeoLlmoRoute: AiSeoLlmoRoute,
+  ContentMarketingBloggingCopywritingRoute:
+    ContentMarketingBloggingCopywritingRoute,
+  ContentMarketingGuestPostingLinkBuildingRoute:
+    ContentMarketingGuestPostingLinkBuildingRoute,
+  PaidAdvertisingGoogleAdsRoute: PaidAdvertisingGoogleAdsRoute,
+  PaidAdvertisingSocialMediaAdsRoute: PaidAdvertisingSocialMediaAdsRoute,
+  PaidAdvertisingSocialMediaMarketingRoute:
+    PaidAdvertisingSocialMediaMarketingRoute,
   SeoServicesGeoTargetingSeoRoute: SeoServicesGeoTargetingSeoRoute,
   SeoServicesGlobalSeoRoute: SeoServicesGlobalSeoRoute,
   SeoServicesLocalCitationsGmbRoute: SeoServicesLocalCitationsGmbRoute,
   SeoServicesLocalSeoRoute: SeoServicesLocalSeoRoute,
   SeoServicesTechnicalSeoRoute: SeoServicesTechnicalSeoRoute,
+  WebDesignDevelopmentEcommerceDevelopmentRoute:
+    WebDesignDevelopmentEcommerceDevelopmentRoute,
+  WebDesignDevelopmentWordpressDevelopmentRoute:
+    WebDesignDevelopmentWordpressDevelopmentRoute,
   AiSeoIndexRoute: AiSeoIndexRoute,
+  ContentMarketingIndexRoute: ContentMarketingIndexRoute,
+  PaidAdvertisingIndexRoute: PaidAdvertisingIndexRoute,
   SeoServicesIndexRoute: SeoServicesIndexRoute,
+  WebDesignDevelopmentIndexRoute: WebDesignDevelopmentIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
