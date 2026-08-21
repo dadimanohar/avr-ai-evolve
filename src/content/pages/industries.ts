@@ -530,7 +530,7 @@ function industryFaqs(s: IndustrySeed): Faq[] {
     },
     {
       question: `Is the work manual and safe for ${s.name.toLowerCase()} sites?`,
-      answer: `Every link, citation and content asset is produced manually. We use no PBNs, no automated link tools and no AI-spun content — critical in a sector where ${s.challenges[0].toLowerCase()}.`,
+      answer: `Every link, citation and content asset is produced manually. We use no PBNs, no automated link tools and no AI-spun content — critical in a sector where ${(s.challenges[0] ?? "trust matters").toLowerCase()}.`,
     },
     {
       question: `Can you work with our existing ${s.name.toLowerCase()} website?`,
@@ -549,13 +549,13 @@ function industryPage(s: IndustrySeed, index: number): PageContent {
     serviceName: `${s.name} SEO Services`,
     answer: `AVR Web Consulting runs SEO and AI visibility programmes for ${s.name.toLowerCase()} businesses, targeting ${s.buyer} across ${s.channels}. We combine technical SEO, answer-first content and structured data (${s.schema}) so you rank on Google and get cited by ChatGPT, Gemini, Perplexity and AI Overviews.`,
     hero: {
-      image: images[index % images.length],
+      image: images[index % images.length] ?? teamMeeting.url,
       imageAlt: `${s.name} team reviewing digital marketing performance`,
     },
     highlights: [
       { label: "Buying cycle", value: s.cycle },
       { label: "Programmes from", value: "$100/mo" },
-      { label: "Core schema", value: s.schema.split(" + ")[0] },
+      { label: "Core schema", value: s.schema.split(" + ")[0] ?? "Schema" },
       { label: "Markets", value: "India + global" },
     ],
     breadcrumb: [
