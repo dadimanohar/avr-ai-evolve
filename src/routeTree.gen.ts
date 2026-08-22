@@ -24,6 +24,7 @@ import { Route as ContentMarketingIndexRouteImport } from './routes/content-mark
 import { Route as ContentMarketingBloggingCopywritingRouteImport } from './routes/content-marketing/blogging-copywriting'
 import { Route as ContentMarketingGuestPostingLinkBuildingRouteImport } from './routes/content-marketing/guest-posting-link-building'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
+import { Route as IndustriesSlugRouteImport } from './routes/industries/$slug'
 import { Route as PaidAdvertisingIndexRouteImport } from './routes/paid-advertising/index'
 import { Route as PaidAdvertisingGoogleAdsRouteImport } from './routes/paid-advertising/google-ads'
 import { Route as PaidAdvertisingSocialMediaAdsRouteImport } from './routes/paid-advertising/social-media-ads'
@@ -117,6 +118,11 @@ const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   path: '/industries/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndustriesSlugRoute = IndustriesSlugRouteImport.update({
+  id: '/industries/$slug',
+  path: '/industries/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PaidAdvertisingIndexRoute = PaidAdvertisingIndexRouteImport.update({
   id: '/paid-advertising/',
   path: '/paid-advertising/',
@@ -204,6 +210,7 @@ export interface FileRoutesByFullPath {
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
   '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
   '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
   '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -234,6 +241,7 @@ export interface FileRoutesByTo {
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
   '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
   '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
   '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -265,6 +273,7 @@ export interface FileRoutesById {
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
   '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
   '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
   '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -297,6 +306,7 @@ export interface FileRouteTypes {
     | '/ai-seo/llmo'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
+    | '/industries/$slug'
     | '/paid-advertising/google-ads'
     | '/paid-advertising/social-media-ads'
     | '/paid-advertising/social-media-marketing'
@@ -327,6 +337,7 @@ export interface FileRouteTypes {
     | '/ai-seo/llmo'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
+    | '/industries/$slug'
     | '/paid-advertising/google-ads'
     | '/paid-advertising/social-media-ads'
     | '/paid-advertising/social-media-marketing'
@@ -357,6 +368,7 @@ export interface FileRouteTypes {
     | '/ai-seo/llmo'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
+    | '/industries/$slug'
     | '/paid-advertising/google-ads'
     | '/paid-advertising/social-media-ads'
     | '/paid-advertising/social-media-marketing'
@@ -388,6 +400,7 @@ export interface RootRouteChildren {
   AiSeoLlmoRoute: typeof AiSeoLlmoRoute
   ContentMarketingBloggingCopywritingRoute: typeof ContentMarketingBloggingCopywritingRoute
   ContentMarketingGuestPostingLinkBuildingRoute: typeof ContentMarketingGuestPostingLinkBuildingRoute
+  IndustriesSlugRoute: typeof IndustriesSlugRoute
   PaidAdvertisingGoogleAdsRoute: typeof PaidAdvertisingGoogleAdsRoute
   PaidAdvertisingSocialMediaAdsRoute: typeof PaidAdvertisingSocialMediaAdsRoute
   PaidAdvertisingSocialMediaMarketingRoute: typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -513,6 +526,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries/$slug': {
+      id: '/industries/$slug'
+      path: '/industries/$slug'
+      fullPath: '/industries/$slug'
+      preLoaderRoute: typeof IndustriesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/paid-advertising/': {
       id: '/paid-advertising/'
       path: '/paid-advertising'
@@ -622,6 +642,7 @@ const rootRouteChildren: RootRouteChildren = {
     ContentMarketingBloggingCopywritingRoute,
   ContentMarketingGuestPostingLinkBuildingRoute:
     ContentMarketingGuestPostingLinkBuildingRoute,
+  IndustriesSlugRoute: IndustriesSlugRoute,
   PaidAdvertisingGoogleAdsRoute: PaidAdvertisingGoogleAdsRoute,
   PaidAdvertisingSocialMediaAdsRoute: PaidAdvertisingSocialMediaAdsRoute,
   PaidAdvertisingSocialMediaMarketingRoute:
