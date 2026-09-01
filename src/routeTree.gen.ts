@@ -25,6 +25,7 @@ import { Route as ContentMarketingBloggingCopywritingRouteImport } from './route
 import { Route as ContentMarketingGuestPostingLinkBuildingRouteImport } from './routes/content-marketing/guest-posting-link-building'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as IndustriesSlugRouteImport } from './routes/industries/$slug'
+import { Route as LocationsIndexRouteImport } from './routes/locations/index'
 import { Route as PaidAdvertisingIndexRouteImport } from './routes/paid-advertising/index'
 import { Route as PaidAdvertisingGoogleAdsRouteImport } from './routes/paid-advertising/google-ads'
 import { Route as PaidAdvertisingSocialMediaAdsRouteImport } from './routes/paid-advertising/social-media-ads'
@@ -121,6 +122,11 @@ const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
 const IndustriesSlugRoute = IndustriesSlugRouteImport.update({
   id: '/industries/$slug',
   path: '/industries/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsIndexRoute = LocationsIndexRouteImport.update({
+  id: '/locations/',
+  path: '/locations/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PaidAdvertisingIndexRoute = PaidAdvertisingIndexRouteImport.update({
@@ -224,6 +230,7 @@ export interface FileRoutesByFullPath {
   '/ai-seo/': typeof AiSeoIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
+  '/locations/': typeof LocationsIndexRoute
   '/paid-advertising/': typeof PaidAdvertisingIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
   '/web-design-development/': typeof WebDesignDevelopmentIndexRoute
@@ -255,6 +262,7 @@ export interface FileRoutesByTo {
   '/ai-seo': typeof AiSeoIndexRoute
   '/content-marketing': typeof ContentMarketingIndexRoute
   '/industries': typeof IndustriesIndexRoute
+  '/locations': typeof LocationsIndexRoute
   '/paid-advertising': typeof PaidAdvertisingIndexRoute
   '/seo-services': typeof SeoServicesIndexRoute
   '/web-design-development': typeof WebDesignDevelopmentIndexRoute
@@ -287,6 +295,7 @@ export interface FileRoutesById {
   '/ai-seo/': typeof AiSeoIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
+  '/locations/': typeof LocationsIndexRoute
   '/paid-advertising/': typeof PaidAdvertisingIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
   '/web-design-development/': typeof WebDesignDevelopmentIndexRoute
@@ -320,6 +329,7 @@ export interface FileRouteTypes {
     | '/ai-seo/'
     | '/content-marketing/'
     | '/industries/'
+    | '/locations/'
     | '/paid-advertising/'
     | '/seo-services/'
     | '/web-design-development/'
@@ -351,6 +361,7 @@ export interface FileRouteTypes {
     | '/ai-seo'
     | '/content-marketing'
     | '/industries'
+    | '/locations'
     | '/paid-advertising'
     | '/seo-services'
     | '/web-design-development'
@@ -382,6 +393,7 @@ export interface FileRouteTypes {
     | '/ai-seo/'
     | '/content-marketing/'
     | '/industries/'
+    | '/locations/'
     | '/paid-advertising/'
     | '/seo-services/'
     | '/web-design-development/'
@@ -414,6 +426,7 @@ export interface RootRouteChildren {
   AiSeoIndexRoute: typeof AiSeoIndexRoute
   ContentMarketingIndexRoute: typeof ContentMarketingIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
+  LocationsIndexRoute: typeof LocationsIndexRoute
   PaidAdvertisingIndexRoute: typeof PaidAdvertisingIndexRoute
   SeoServicesIndexRoute: typeof SeoServicesIndexRoute
   WebDesignDevelopmentIndexRoute: typeof WebDesignDevelopmentIndexRoute
@@ -531,6 +544,13 @@ declare module '@tanstack/react-router' {
       path: '/industries/$slug'
       fullPath: '/industries/$slug'
       preLoaderRoute: typeof IndustriesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/': {
+      id: '/locations/'
+      path: '/locations'
+      fullPath: '/locations/'
+      preLoaderRoute: typeof LocationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/paid-advertising/': {
@@ -659,6 +679,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiSeoIndexRoute: AiSeoIndexRoute,
   ContentMarketingIndexRoute: ContentMarketingIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
+  LocationsIndexRoute: LocationsIndexRoute,
   PaidAdvertisingIndexRoute: PaidAdvertisingIndexRoute,
   SeoServicesIndexRoute: SeoServicesIndexRoute,
   WebDesignDevelopmentIndexRoute: WebDesignDevelopmentIndexRoute,
