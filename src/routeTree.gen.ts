@@ -25,6 +25,8 @@ import { Route as ContentMarketingBloggingCopywritingRouteImport } from './route
 import { Route as ContentMarketingGuestPostingLinkBuildingRouteImport } from './routes/content-marketing/guest-posting-link-building'
 import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
 import { Route as IndustriesSlugRouteImport } from './routes/industries/$slug'
+import { Route as LocationsIndexRouteImport } from './routes/locations/index'
+import { Route as LocationsSlugRouteImport } from './routes/locations/$slug'
 import { Route as PaidAdvertisingIndexRouteImport } from './routes/paid-advertising/index'
 import { Route as PaidAdvertisingGoogleAdsRouteImport } from './routes/paid-advertising/google-ads'
 import { Route as PaidAdvertisingSocialMediaAdsRouteImport } from './routes/paid-advertising/social-media-ads'
@@ -123,6 +125,16 @@ const IndustriesSlugRoute = IndustriesSlugRouteImport.update({
   path: '/industries/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocationsIndexRoute = LocationsIndexRouteImport.update({
+  id: '/locations/',
+  path: '/locations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsSlugRoute = LocationsSlugRouteImport.update({
+  id: '/locations/$slug',
+  path: '/locations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PaidAdvertisingIndexRoute = PaidAdvertisingIndexRouteImport.update({
   id: '/paid-advertising/',
   path: '/paid-advertising/',
@@ -211,6 +223,7 @@ export interface FileRoutesByFullPath {
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
   '/industries/$slug': typeof IndustriesSlugRoute
+  '/locations/$slug': typeof LocationsSlugRoute
   '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
   '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
   '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -224,6 +237,7 @@ export interface FileRoutesByFullPath {
   '/ai-seo/': typeof AiSeoIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
+  '/locations/': typeof LocationsIndexRoute
   '/paid-advertising/': typeof PaidAdvertisingIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
   '/web-design-development/': typeof WebDesignDevelopmentIndexRoute
@@ -242,6 +256,7 @@ export interface FileRoutesByTo {
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
   '/industries/$slug': typeof IndustriesSlugRoute
+  '/locations/$slug': typeof LocationsSlugRoute
   '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
   '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
   '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -255,6 +270,7 @@ export interface FileRoutesByTo {
   '/ai-seo': typeof AiSeoIndexRoute
   '/content-marketing': typeof ContentMarketingIndexRoute
   '/industries': typeof IndustriesIndexRoute
+  '/locations': typeof LocationsIndexRoute
   '/paid-advertising': typeof PaidAdvertisingIndexRoute
   '/seo-services': typeof SeoServicesIndexRoute
   '/web-design-development': typeof WebDesignDevelopmentIndexRoute
@@ -274,6 +290,7 @@ export interface FileRoutesById {
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
   '/industries/$slug': typeof IndustriesSlugRoute
+  '/locations/$slug': typeof LocationsSlugRoute
   '/paid-advertising/google-ads': typeof PaidAdvertisingGoogleAdsRoute
   '/paid-advertising/social-media-ads': typeof PaidAdvertisingSocialMediaAdsRoute
   '/paid-advertising/social-media-marketing': typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -287,6 +304,7 @@ export interface FileRoutesById {
   '/ai-seo/': typeof AiSeoIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
+  '/locations/': typeof LocationsIndexRoute
   '/paid-advertising/': typeof PaidAdvertisingIndexRoute
   '/seo-services/': typeof SeoServicesIndexRoute
   '/web-design-development/': typeof WebDesignDevelopmentIndexRoute
@@ -307,6 +325,7 @@ export interface FileRouteTypes {
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
     | '/industries/$slug'
+    | '/locations/$slug'
     | '/paid-advertising/google-ads'
     | '/paid-advertising/social-media-ads'
     | '/paid-advertising/social-media-marketing'
@@ -320,6 +339,7 @@ export interface FileRouteTypes {
     | '/ai-seo/'
     | '/content-marketing/'
     | '/industries/'
+    | '/locations/'
     | '/paid-advertising/'
     | '/seo-services/'
     | '/web-design-development/'
@@ -338,6 +358,7 @@ export interface FileRouteTypes {
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
     | '/industries/$slug'
+    | '/locations/$slug'
     | '/paid-advertising/google-ads'
     | '/paid-advertising/social-media-ads'
     | '/paid-advertising/social-media-marketing'
@@ -351,6 +372,7 @@ export interface FileRouteTypes {
     | '/ai-seo'
     | '/content-marketing'
     | '/industries'
+    | '/locations'
     | '/paid-advertising'
     | '/seo-services'
     | '/web-design-development'
@@ -369,6 +391,7 @@ export interface FileRouteTypes {
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
     | '/industries/$slug'
+    | '/locations/$slug'
     | '/paid-advertising/google-ads'
     | '/paid-advertising/social-media-ads'
     | '/paid-advertising/social-media-marketing'
@@ -382,6 +405,7 @@ export interface FileRouteTypes {
     | '/ai-seo/'
     | '/content-marketing/'
     | '/industries/'
+    | '/locations/'
     | '/paid-advertising/'
     | '/seo-services/'
     | '/web-design-development/'
@@ -401,6 +425,7 @@ export interface RootRouteChildren {
   ContentMarketingBloggingCopywritingRoute: typeof ContentMarketingBloggingCopywritingRoute
   ContentMarketingGuestPostingLinkBuildingRoute: typeof ContentMarketingGuestPostingLinkBuildingRoute
   IndustriesSlugRoute: typeof IndustriesSlugRoute
+  LocationsSlugRoute: typeof LocationsSlugRoute
   PaidAdvertisingGoogleAdsRoute: typeof PaidAdvertisingGoogleAdsRoute
   PaidAdvertisingSocialMediaAdsRoute: typeof PaidAdvertisingSocialMediaAdsRoute
   PaidAdvertisingSocialMediaMarketingRoute: typeof PaidAdvertisingSocialMediaMarketingRoute
@@ -414,6 +439,7 @@ export interface RootRouteChildren {
   AiSeoIndexRoute: typeof AiSeoIndexRoute
   ContentMarketingIndexRoute: typeof ContentMarketingIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
+  LocationsIndexRoute: typeof LocationsIndexRoute
   PaidAdvertisingIndexRoute: typeof PaidAdvertisingIndexRoute
   SeoServicesIndexRoute: typeof SeoServicesIndexRoute
   WebDesignDevelopmentIndexRoute: typeof WebDesignDevelopmentIndexRoute
@@ -533,6 +559,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/locations/': {
+      id: '/locations/'
+      path: '/locations'
+      fullPath: '/locations/'
+      preLoaderRoute: typeof LocationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/$slug': {
+      id: '/locations/$slug'
+      path: '/locations/$slug'
+      fullPath: '/locations/$slug'
+      preLoaderRoute: typeof LocationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/paid-advertising/': {
       id: '/paid-advertising/'
       path: '/paid-advertising'
@@ -643,6 +683,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContentMarketingGuestPostingLinkBuildingRoute:
     ContentMarketingGuestPostingLinkBuildingRoute,
   IndustriesSlugRoute: IndustriesSlugRoute,
+  LocationsSlugRoute: LocationsSlugRoute,
   PaidAdvertisingGoogleAdsRoute: PaidAdvertisingGoogleAdsRoute,
   PaidAdvertisingSocialMediaAdsRoute: PaidAdvertisingSocialMediaAdsRoute,
   PaidAdvertisingSocialMediaMarketingRoute:
@@ -659,6 +700,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiSeoIndexRoute: AiSeoIndexRoute,
   ContentMarketingIndexRoute: ContentMarketingIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
+  LocationsIndexRoute: LocationsIndexRoute,
   PaidAdvertisingIndexRoute: PaidAdvertisingIndexRoute,
   SeoServicesIndexRoute: SeoServicesIndexRoute,
   WebDesignDevelopmentIndexRoute: WebDesignDevelopmentIndexRoute,
