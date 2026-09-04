@@ -24,6 +24,7 @@ import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-s
 import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
 import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
 import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies/index'
 import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies/$slug'
 import { Route as ContentMarketingIndexRouteImport } from './routes/content-marketing/index'
@@ -122,6 +123,11 @@ const AiSeoLlmSeoRoute = AiSeoLlmSeoRouteImport.update({
 const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
   id: '/ai-seo/llmo',
   path: '/ai-seo/llmo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
@@ -260,6 +266,7 @@ export interface FileRoutesByFullPath {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
@@ -299,6 +306,7 @@ export interface FileRoutesByTo {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
@@ -339,6 +347,7 @@ export interface FileRoutesById {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
@@ -380,6 +389,7 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/blog/$slug'
     | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
@@ -419,6 +429,7 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/blog/$slug'
     | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
@@ -458,6 +469,7 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/blog/$slug'
     | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
@@ -498,6 +510,7 @@ export interface RootRouteChildren {
   AiSeoGeoSeoRoute: typeof AiSeoGeoSeoRoute
   AiSeoLlmSeoRoute: typeof AiSeoLlmSeoRoute
   AiSeoLlmoRoute: typeof AiSeoLlmoRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
   ContentMarketingBloggingCopywritingRoute: typeof ContentMarketingBloggingCopywritingRoute
   ContentMarketingGuestPostingLinkBuildingRoute: typeof ContentMarketingGuestPostingLinkBuildingRoute
@@ -628,6 +641,13 @@ declare module '@tanstack/react-router' {
       path: '/ai-seo/llmo'
       fullPath: '/ai-seo/llmo'
       preLoaderRoute: typeof AiSeoLlmoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/': {
@@ -802,6 +822,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiSeoGeoSeoRoute: AiSeoGeoSeoRoute,
   AiSeoLlmSeoRoute: AiSeoLlmSeoRoute,
   AiSeoLlmoRoute: AiSeoLlmoRoute,
+  BlogSlugRoute: BlogSlugRoute,
   CaseStudiesSlugRoute: CaseStudiesSlugRoute,
   ContentMarketingBloggingCopywritingRoute:
     ContentMarketingBloggingCopywritingRoute,
