@@ -28,7 +28,6 @@ export const Route = createFileRoute("/blog/$slug")({
           description: page.description,
           path: page.slug,
           datePublished: seed.date,
-          ...(page.hero?.image ? { image: page.hero.image } : {}),
         }),
         faqSchema(page.faqs),
         breadcrumbSchema(page.breadcrumb),

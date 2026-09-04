@@ -1,5 +1,5 @@
 import type { PageContent } from "@/content/types";
-import { business } from "@/content/site";
+import { business, fullAddress } from "@/content/site";
 import teamMeeting from "@/assets/team-meeting.jpg.asset.json";
 import entrepreneur from "@/assets/entrepreneur.jpg.asset.json";
 
@@ -228,14 +228,14 @@ export const aboutPage: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: `Our head office is at ${business.address}. We deliver remotely across India — Visakhapatnam, Hyderabad, Bengaluru, Chennai, Mumbai, Delhi, Pune and Kolkata — and internationally in the United States, United Kingdom, United Arab Emirates and Europe, working overlapping hours with each timezone.`,
+          text: `Our head office is at ${fullAddress}. We deliver remotely across India — Visakhapatnam, Hyderabad, Bengaluru, Chennai, Mumbai, Delhi, Pune and Kolkata — and internationally in the United States, United Kingdom, United Arab Emirates and Europe, working overlapping hours with each timezone.`,
         },
       ],
     },
   ],
   faqs: [
     { question: "Who is AVR Web Consulting?", answer: "AVR Web Consulting is a digital marketing agency based in Visakhapatnam, India, specialising in SEO and AI search optimisation for clients in India, the US, UK, UAE and Europe." },
-    { question: "Where is AVR Web Consulting located?", answer: `Our office is at ${business.address}. We work with clients remotely worldwide and meet on-site with clients in and around Visakhapatnam.` },
+    { question: "Where is AVR Web Consulting located?", answer: `Our office is at ${fullAddress}. We work with clients remotely worldwide and meet on-site with clients in and around Visakhapatnam.` },
     { question: "What makes AVR different from other SEO agencies?", answer: "We run a hybrid model: traditional SEO for Google plus AI search optimisation for ChatGPT, Gemini, Perplexity and AI Overviews. Work is manual and safe, pricing is fixed and low, and there is no lock-in contract." },
     { question: "How big is the team?", answer: "We are a compact senior team of strategists, content specialists, developers and analysts. Small enough that you speak to the person doing the work, resourced enough to run enterprise programs." },
     { question: "What industries do you serve?", answer: "Startups, e-commerce, healthcare, fashion and retail, SaaS, real estate, education, travel, legal services and manufacturing. See our industries section for sector-specific playbooks." },
