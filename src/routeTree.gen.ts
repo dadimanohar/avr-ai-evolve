@@ -10,7 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as AiSeoIndexRouteImport } from './routes/ai-seo/index'
 import { Route as AiSeoAiCitationsMentionsRouteImport } from './routes/ai-seo/ai-citations-mentions'
 import { Route as AiSeoAiOverviewsRouteImport } from './routes/ai-seo/ai-overviews'
@@ -20,6 +25,10 @@ import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-s
 import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
 import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
 import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies/index'
+import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies/$slug'
 import { Route as ContentMarketingIndexRouteImport } from './routes/content-marketing/index'
 import { Route as ContentMarketingBloggingCopywritingRouteImport } from './routes/content-marketing/blogging-copywriting'
 import { Route as ContentMarketingGuestPostingLinkBuildingRouteImport } from './routes/content-marketing/guest-posting-link-building'
@@ -46,9 +55,34 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AiSeoIndexRoute = AiSeoIndexRouteImport.update({
@@ -96,6 +130,26 @@ const AiSeoLlmSeoRoute = AiSeoLlmSeoRouteImport.update({
 const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
   id: '/ai-seo/llmo',
   path: '/ai-seo/llmo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/case-studies/',
+  path: '/case-studies/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesSlugRoute = CaseStudiesSlugRouteImport.update({
+  id: '/case-studies/$slug',
+  path: '/case-studies/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContentMarketingIndexRoute = ContentMarketingIndexRouteImport.update({
@@ -211,7 +265,12 @@ const WebDesignDevelopmentWordpressDevelopmentRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -220,6 +279,8 @@ export interface FileRoutesByFullPath {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
   '/industries/$slug': typeof IndustriesSlugRoute
@@ -235,6 +296,8 @@ export interface FileRoutesByFullPath {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/locations/': typeof LocationsIndexRoute
@@ -244,7 +307,12 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -253,6 +321,8 @@ export interface FileRoutesByTo {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
   '/industries/$slug': typeof IndustriesSlugRoute
@@ -268,6 +338,8 @@ export interface FileRoutesByTo {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo': typeof AiSeoIndexRoute
+  '/blog': typeof BlogIndexRoute
+  '/case-studies': typeof CaseStudiesIndexRoute
   '/content-marketing': typeof ContentMarketingIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/locations': typeof LocationsIndexRoute
@@ -278,7 +350,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -287,6 +364,8 @@ export interface FileRoutesById {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
   '/content-marketing/guest-posting-link-building': typeof ContentMarketingGuestPostingLinkBuildingRoute
   '/industries/$slug': typeof IndustriesSlugRoute
@@ -302,6 +381,8 @@ export interface FileRoutesById {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/locations/': typeof LocationsIndexRoute
@@ -313,7 +394,12 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/contact'
+    | '/faqs'
+    | '/pricing'
+    | '/privacy-policy'
+    | '/terms-of-service'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -322,6 +408,8 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/blog/$slug'
+    | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
     | '/industries/$slug'
@@ -337,6 +425,8 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/blog/'
+    | '/case-studies/'
     | '/content-marketing/'
     | '/industries/'
     | '/locations/'
@@ -346,7 +436,12 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/contact'
+    | '/faqs'
+    | '/pricing'
+    | '/privacy-policy'
+    | '/terms-of-service'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -355,6 +450,8 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/blog/$slug'
+    | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
     | '/industries/$slug'
@@ -370,6 +467,8 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo'
+    | '/blog'
+    | '/case-studies'
     | '/content-marketing'
     | '/industries'
     | '/locations'
@@ -379,7 +478,12 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/contact'
+    | '/faqs'
+    | '/pricing'
+    | '/privacy-policy'
+    | '/terms-of-service'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -388,6 +492,8 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/blog/$slug'
+    | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
     | '/content-marketing/guest-posting-link-building'
     | '/industries/$slug'
@@ -403,6 +509,8 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/blog/'
+    | '/case-studies/'
     | '/content-marketing/'
     | '/industries/'
     | '/locations/'
@@ -413,7 +521,12 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  FaqsRoute: typeof FaqsRoute
+  PricingRoute: typeof PricingRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsOfServiceRoute: typeof TermsOfServiceRoute
   AiSeoAiCitationsMentionsRoute: typeof AiSeoAiCitationsMentionsRoute
   AiSeoAiOverviewsRoute: typeof AiSeoAiOverviewsRoute
   AiSeoAiRetrievalSystemsRoute: typeof AiSeoAiRetrievalSystemsRoute
@@ -422,6 +535,8 @@ export interface RootRouteChildren {
   AiSeoGeoSeoRoute: typeof AiSeoGeoSeoRoute
   AiSeoLlmSeoRoute: typeof AiSeoLlmSeoRoute
   AiSeoLlmoRoute: typeof AiSeoLlmoRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
   ContentMarketingBloggingCopywritingRoute: typeof ContentMarketingBloggingCopywritingRoute
   ContentMarketingGuestPostingLinkBuildingRoute: typeof ContentMarketingGuestPostingLinkBuildingRoute
   IndustriesSlugRoute: typeof IndustriesSlugRoute
@@ -437,6 +552,8 @@ export interface RootRouteChildren {
   WebDesignDevelopmentEcommerceDevelopmentRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   WebDesignDevelopmentWordpressDevelopmentRoute: typeof WebDesignDevelopmentWordpressDevelopmentRoute
   AiSeoIndexRoute: typeof AiSeoIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
   ContentMarketingIndexRoute: typeof ContentMarketingIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
@@ -454,11 +571,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ai-seo/': {
@@ -522,6 +674,34 @@ declare module '@tanstack/react-router' {
       path: '/ai-seo/llmo'
       fullPath: '/ai-seo/llmo'
       preLoaderRoute: typeof AiSeoLlmoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/case-studies'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/$slug': {
+      id: '/case-studies/$slug'
+      path: '/case-studies/$slug'
+      fullPath: '/case-studies/$slug'
+      preLoaderRoute: typeof CaseStudiesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/content-marketing/': {
@@ -669,7 +849,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  FaqsRoute: FaqsRoute,
+  PricingRoute: PricingRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsOfServiceRoute: TermsOfServiceRoute,
   AiSeoAiCitationsMentionsRoute: AiSeoAiCitationsMentionsRoute,
   AiSeoAiOverviewsRoute: AiSeoAiOverviewsRoute,
   AiSeoAiRetrievalSystemsRoute: AiSeoAiRetrievalSystemsRoute,
@@ -678,6 +863,8 @@ const rootRouteChildren: RootRouteChildren = {
   AiSeoGeoSeoRoute: AiSeoGeoSeoRoute,
   AiSeoLlmSeoRoute: AiSeoLlmSeoRoute,
   AiSeoLlmoRoute: AiSeoLlmoRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  CaseStudiesSlugRoute: CaseStudiesSlugRoute,
   ContentMarketingBloggingCopywritingRoute:
     ContentMarketingBloggingCopywritingRoute,
   ContentMarketingGuestPostingLinkBuildingRoute:
@@ -698,6 +885,8 @@ const rootRouteChildren: RootRouteChildren = {
   WebDesignDevelopmentWordpressDevelopmentRoute:
     WebDesignDevelopmentWordpressDevelopmentRoute,
   AiSeoIndexRoute: AiSeoIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
   ContentMarketingIndexRoute: ContentMarketingIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,
