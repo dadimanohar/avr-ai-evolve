@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as AiSeoIndexRouteImport } from './routes/ai-seo/index'
 import { Route as AiSeoAiCitationsMentionsRouteImport } from './routes/ai-seo/ai-citations-mentions'
 import { Route as AiSeoAiOverviewsRouteImport } from './routes/ai-seo/ai-overviews'
@@ -49,6 +50,11 @@ const IndexRoute = IndexRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AiSeoIndexRoute = AiSeoIndexRouteImport.update({
@@ -212,6 +218,7 @@ const WebDesignDevelopmentWordpressDevelopmentRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/pricing': typeof PricingRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -245,6 +252,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/pricing': typeof PricingRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -279,6 +287,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/pricing': typeof PricingRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -314,6 +323,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
+    | '/pricing'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -347,6 +357,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contact'
+    | '/pricing'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -380,6 +391,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contact'
+    | '/pricing'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -414,6 +426,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  PricingRoute: typeof PricingRoute
   AiSeoAiCitationsMentionsRoute: typeof AiSeoAiCitationsMentionsRoute
   AiSeoAiOverviewsRoute: typeof AiSeoAiOverviewsRoute
   AiSeoAiRetrievalSystemsRoute: typeof AiSeoAiRetrievalSystemsRoute
@@ -459,6 +472,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ai-seo/': {
@@ -670,6 +690,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  PricingRoute: PricingRoute,
   AiSeoAiCitationsMentionsRoute: AiSeoAiCitationsMentionsRoute,
   AiSeoAiOverviewsRoute: AiSeoAiOverviewsRoute,
   AiSeoAiRetrievalSystemsRoute: AiSeoAiRetrievalSystemsRoute,
