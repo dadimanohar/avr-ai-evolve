@@ -24,6 +24,7 @@ import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-s
 import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
 import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
 import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies/index'
 import { Route as ContentMarketingIndexRouteImport } from './routes/content-marketing/index'
 import { Route as ContentMarketingBloggingCopywritingRouteImport } from './routes/content-marketing/blogging-copywriting'
 import { Route as ContentMarketingGuestPostingLinkBuildingRouteImport } from './routes/content-marketing/guest-posting-link-building'
@@ -120,6 +121,11 @@ const AiSeoLlmSeoRoute = AiSeoLlmSeoRouteImport.update({
 const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
   id: '/ai-seo/llmo',
   path: '/ai-seo/llmo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/case-studies/',
+  path: '/case-studies/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContentMarketingIndexRoute = ContentMarketingIndexRouteImport.update({
@@ -263,6 +269,7 @@ export interface FileRoutesByFullPath {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/locations/': typeof LocationsIndexRoute
@@ -300,6 +307,7 @@ export interface FileRoutesByTo {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo': typeof AiSeoIndexRoute
+  '/case-studies': typeof CaseStudiesIndexRoute
   '/content-marketing': typeof ContentMarketingIndexRoute
   '/industries': typeof IndustriesIndexRoute
   '/locations': typeof LocationsIndexRoute
@@ -338,6 +346,7 @@ export interface FileRoutesById {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
   '/locations/': typeof LocationsIndexRoute
@@ -377,6 +386,7 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/case-studies/'
     | '/content-marketing/'
     | '/industries/'
     | '/locations/'
@@ -414,6 +424,7 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo'
+    | '/case-studies'
     | '/content-marketing'
     | '/industries'
     | '/locations'
@@ -451,6 +462,7 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/case-studies/'
     | '/content-marketing/'
     | '/industries/'
     | '/locations/'
@@ -489,6 +501,7 @@ export interface RootRouteChildren {
   WebDesignDevelopmentEcommerceDevelopmentRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   WebDesignDevelopmentWordpressDevelopmentRoute: typeof WebDesignDevelopmentWordpressDevelopmentRoute
   AiSeoIndexRoute: typeof AiSeoIndexRoute
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
   ContentMarketingIndexRoute: typeof ContentMarketingIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
@@ -602,6 +615,13 @@ declare module '@tanstack/react-router' {
       path: '/ai-seo/llmo'
       fullPath: '/ai-seo/llmo'
       preLoaderRoute: typeof AiSeoLlmoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/case-studies'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/content-marketing/': {
@@ -782,6 +802,7 @@ const rootRouteChildren: RootRouteChildren = {
   WebDesignDevelopmentWordpressDevelopmentRoute:
     WebDesignDevelopmentWordpressDevelopmentRoute,
   AiSeoIndexRoute: AiSeoIndexRoute,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
   ContentMarketingIndexRoute: ContentMarketingIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,
