@@ -110,11 +110,11 @@ function BlogIndex() {
         </ul>
       </Section>
 
-      <Section tone="muted">
+      <Section tone="mist">
         <SectionHeading
           eyebrow="Blog FAQs"
           title="About the AVR blog"
-          text="How we research, write and update these guides."
+          intro="How we research, write and update these guides."
         />
         <div className="mt-8">
           <FaqAccordion faqs={blogHub.faqs} heading="Blog questions" />

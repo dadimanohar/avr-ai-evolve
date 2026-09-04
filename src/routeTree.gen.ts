@@ -24,6 +24,7 @@ import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-s
 import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
 import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
 import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies/index'
 import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies/$slug'
@@ -123,6 +124,11 @@ const AiSeoLlmSeoRoute = AiSeoLlmSeoRouteImport.update({
 const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
   id: '/ai-seo/llmo',
   path: '/ai-seo/llmo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
@@ -283,6 +289,7 @@ export interface FileRoutesByFullPath {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
@@ -323,6 +330,7 @@ export interface FileRoutesByTo {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo': typeof AiSeoIndexRoute
+  '/blog': typeof BlogIndexRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/content-marketing': typeof ContentMarketingIndexRoute
   '/industries': typeof IndustriesIndexRoute
@@ -364,6 +372,7 @@ export interface FileRoutesById {
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/content-marketing/': typeof ContentMarketingIndexRoute
   '/industries/': typeof IndustriesIndexRoute
@@ -406,6 +415,7 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/blog/'
     | '/case-studies/'
     | '/content-marketing/'
     | '/industries/'
@@ -446,6 +456,7 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo'
+    | '/blog'
     | '/case-studies'
     | '/content-marketing'
     | '/industries'
@@ -486,6 +497,7 @@ export interface FileRouteTypes {
     | '/web-design-development/ecommerce-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
+    | '/blog/'
     | '/case-studies/'
     | '/content-marketing/'
     | '/industries/'
@@ -527,6 +539,7 @@ export interface RootRouteChildren {
   WebDesignDevelopmentEcommerceDevelopmentRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRoute
   WebDesignDevelopmentWordpressDevelopmentRoute: typeof WebDesignDevelopmentWordpressDevelopmentRoute
   AiSeoIndexRoute: typeof AiSeoIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
   ContentMarketingIndexRoute: typeof ContentMarketingIndexRoute
   IndustriesIndexRoute: typeof IndustriesIndexRoute
@@ -641,6 +654,13 @@ declare module '@tanstack/react-router' {
       path: '/ai-seo/llmo'
       fullPath: '/ai-seo/llmo'
       preLoaderRoute: typeof AiSeoLlmoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/$slug': {
@@ -844,6 +864,7 @@ const rootRouteChildren: RootRouteChildren = {
   WebDesignDevelopmentWordpressDevelopmentRoute:
     WebDesignDevelopmentWordpressDevelopmentRoute,
   AiSeoIndexRoute: AiSeoIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,
   ContentMarketingIndexRoute: ContentMarketingIndexRoute,
   IndustriesIndexRoute: IndustriesIndexRoute,
