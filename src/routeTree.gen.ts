@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as AiSeoIndexRouteImport } from './routes/ai-seo/index'
 import { Route as AiSeoAiCitationsMentionsRouteImport } from './routes/ai-seo/ai-citations-mentions'
 import { Route as AiSeoAiOverviewsRouteImport } from './routes/ai-seo/ai-overviews'
@@ -61,6 +62,11 @@ const ContactRoute = ContactRouteImport.update({
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AiSeoIndexRoute = AiSeoIndexRouteImport.update({
@@ -226,6 +232,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -261,6 +268,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -297,6 +305,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/ai-seo/ai-citations-mentions': typeof AiSeoAiCitationsMentionsRoute
   '/ai-seo/ai-overviews': typeof AiSeoAiOverviewsRoute
   '/ai-seo/ai-retrieval-systems': typeof AiSeoAiRetrievalSystemsRoute
@@ -334,6 +343,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/pricing'
+    | '/privacy-policy'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -369,6 +379,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/pricing'
+    | '/privacy-policy'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -404,6 +415,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/pricing'
+    | '/privacy-policy'
     | '/ai-seo/ai-citations-mentions'
     | '/ai-seo/ai-overviews'
     | '/ai-seo/ai-retrieval-systems'
@@ -440,6 +452,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   PricingRoute: typeof PricingRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   AiSeoAiCitationsMentionsRoute: typeof AiSeoAiCitationsMentionsRoute
   AiSeoAiOverviewsRoute: typeof AiSeoAiOverviewsRoute
   AiSeoAiRetrievalSystemsRoute: typeof AiSeoAiRetrievalSystemsRoute
@@ -499,6 +512,13 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ai-seo/': {
@@ -712,6 +732,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   PricingRoute: PricingRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   AiSeoAiCitationsMentionsRoute: AiSeoAiCitationsMentionsRoute,
   AiSeoAiOverviewsRoute: AiSeoAiOverviewsRoute,
   AiSeoAiRetrievalSystemsRoute: AiSeoAiRetrievalSystemsRoute,
