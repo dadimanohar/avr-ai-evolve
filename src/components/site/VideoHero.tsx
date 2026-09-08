@@ -10,10 +10,12 @@ export function VideoHero({
   eyebrow,
   title,
   subtitle,
+  secondary,
 }: {
   eyebrow: string;
   title: string;
   subtitle: string;
+  secondary?: string;
 }) {
   return (
     <section className="relative isolate min-h-[38rem] overflow-hidden bg-ink text-ink-foreground lg:min-h-[44rem]">
@@ -51,10 +53,15 @@ export function VideoHero({
         <p className="mt-6 max-w-2xl text-balance-pretty text-lg text-ink-foreground/80 lg:text-xl">
           {subtitle}
         </p>
+        {secondary && (
+          <p className="mt-3 max-w-2xl text-sm font-medium text-ink-foreground/70 lg:text-base">
+            {secondary}
+          </p>
+        )}
         <div className="mt-10 flex flex-wrap gap-3">
           <Button asChild size="lg" className="rounded-full">
             <Link to="/contact">
-              Get a free AI + SEO audit
+              Get a free digital audit
               <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>
