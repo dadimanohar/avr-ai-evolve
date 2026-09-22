@@ -820,6 +820,6 @@ export const blogHub: PageContent = {
     { question: "Do you offer a newsletter?", answer: "We send a short monthly digest of new articles and notable search or AI changes. Ask to be added when you contact us." },
     { question: "Are the tactics safe for my site?", answer: "Yes. Everything we publish follows search engine guidelines — we do not document manipulative tactics." },
     { question: "Do you cover markets outside India?", answer: "Yes. Our guides cover US, UK, UAE and European search behaviour alongside Indian markets." },
-    { question: "Can AVR implement what these guides describe?", answer: "Yes. The guides document the exact processes we run for clients from $100/month. Request a free audit to start." },
+    { question: "Can AVR implement what these guides describe?", answer: "Yes. The guides document the exact processes we run for clients from $100/month. Request an audit to start." },
   ],
 };

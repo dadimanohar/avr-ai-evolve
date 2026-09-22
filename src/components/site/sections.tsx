@@ -266,11 +266,15 @@ export function FaqAccordion({ faqs, heading }: { faqs: Faq[]; heading?: string 
 }
 
 export function CTABand({
-  title = "Get a free AI visibility & SEO audit",
+  title = "Get an AI visibility & SEO audit",
   text = "Tell us your target keywords and markets. We reply within one business day with findings, priorities and a fixed monthly price.",
+  ctaText = "Book consultation",
+  showWhatsapp = false,
 }: {
   title?: string;
   text?: string;
+  ctaText?: string;
+  showWhatsapp?: boolean;
 }) {
   return (
     <Section tone="ink">
@@ -282,10 +286,26 @@ export function CTABand({
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg" className="rounded-full">
             <Link to="/contact">
-              Book free consultation
+              {ctaText}
               <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>
+          {showWhatsapp && (
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full border-ink-foreground/30 bg-transparent text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground"
+            >
+              <a
+                href={`${business.whatsapp}?text=Hello%20AVR%20Web%20Consulting,%20I%20would%20like%20to%20discuss%20your%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+            </Button>
+          )}
           <Button
             asChild
             size="lg"

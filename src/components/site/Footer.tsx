@@ -14,7 +14,7 @@ export function Footer() {
               <img
                 src={logo.url}
                 alt="AVR Web Consulting logo"
-                className="h-11 w-11 rounded-full"
+                className="h-11 w-11 rounded-lg"
                 loading="lazy"
               />
               <span className="font-display text-lg font-bold">{business.name}</span>

@@ -6,17 +6,17 @@ import team from "@/assets/team-meeting.jpg.asset.json";
 
 const contactPage: PageContent = {
   slug: "/contact",
-  title: "Contact AVR Web Consulting — Free SEO & AI Visibility Audit",
+  title: "Contact AVR Web Consulting — SEO & AI Visibility Audit",
   h1: "Talk to AVR Web Consulting",
   description:
-    "Contact AVR Web Consulting in Visakhapatnam for a free SEO and AI visibility audit. Email, phone and WhatsApp support for clients across India, the US, UK, UAE and Europe.",
+    "Contact AVR Web Consulting in Visakhapatnam to request an SEO and AI visibility audit. Email, phone and WhatsApp support for clients across India, the US, UK, UAE and Europe.",
   eyebrow: "Contact",
   serviceName: "SEO and AI SEO consulting",
-  answer: `Contact AVR Web Consulting by email at ${business.email}, by phone on ${business.phone}, or on WhatsApp. We reply within one business day, work ${business.hours}, and offer a free SEO and AI visibility audit covering technical health, rankings and AI answer citations.`,
+  answer: `Contact AVR Web Consulting by email at ${business.email}, by phone on ${business.phone}, or on WhatsApp. We reply within one business day, work ${business.hours}, and offer an SEO and AI visibility audit covering technical health, rankings and AI answer citations.`,
   hero: { image: team.url, imageAlt: "AVR Web Consulting team reviewing client campaigns" },
   highlights: [
     { label: "Response time", value: "< 24 hrs" },
-    { label: "Audit", value: "Free" },
+    { label: "Audit", value: "On request" },
     { label: "Hours", value: "Mon–Sat" },
     { label: "Clients in", value: "IN · US · UK · UAE" },
   ],
@@ -45,7 +45,7 @@ const contactPage: PageContent = {
         },
         {
           kind: "callout",
-          title: "Free audit, no obligation",
+          title: "Request an audit, no obligation",
           text: "Send us your domain and top three competitors. You will receive a technical health summary, keyword gap snapshot and an AI visibility baseline showing which assistants already mention your brand.",
         },
       ],
@@ -58,7 +58,7 @@ const contactPage: PageContent = {
           kind: "steps",
           items: [
             { title: "Discovery call", text: "A 30-minute call to understand your market, goals, current performance and constraints." },
-            { title: "Audit delivery", text: "We run the free technical, keyword and AI visibility audit and walk you through the findings." },
+            { title: "Audit delivery", text: "We run the technical, keyword and AI visibility audit and walk you through the findings." },
             { title: "Proposal", text: "A scoped plan with deliverables, timelines and transparent monthly pricing — no lock-in contracts." },
             { title: "Kick-off", text: "Access setup, baseline reporting and the first 30-day sprint begins." },
           ],
@@ -86,7 +86,7 @@ const contactPage: PageContent = {
     },
   ],
   faqs: [
-    { question: "How do I get a free SEO audit?", answer: `Email ${business.email} or call ${business.phone} with your website URL and up to three competitors. We return a technical, keyword and AI visibility audit, usually within three business days.` },
+    { question: "How do I request an SEO audit?", answer: `Email ${business.email} or call ${business.phone} with your website URL and up to three competitors. We return a technical, keyword and AI visibility audit, usually within three business days.` },
     { question: "How quickly do you reply?", answer: "Within one business day. Enquiries received during working hours are usually answered the same day." },
     { question: "What are your working hours?", answer: `${business.hours}. Calls outside these hours are scheduled by request to suit US, UK and UAE time zones.` },
     { question: "Do you work with international clients?", answer: "Yes. Alongside Indian clients, we work with businesses in the US, UK, UAE and Europe, with reporting and calls arranged in your local time." },

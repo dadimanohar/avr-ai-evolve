@@ -31,6 +31,8 @@ const title = "AVR Web Consulting | Digital Marketing Agency";
 const description =
   "Full-service digital marketing agency for SEO, advertising, content, and web development, with advanced AI search, full-stack, and automation capabilities.";
 
+import heroPoster from "@/assets/hero-poster.jpg.asset.json";
+
 export const Route = createFileRoute("/")({
   head: () =>
     buildHead({
@@ -38,6 +40,14 @@ export const Route = createFileRoute("/")({
       description,
       path: "/",
       schemas: [faqSchema(homeFaqs)],
+      links: [
+        {
+          rel: "preload",
+          as: "image",
+          href: heroPoster.url,
+          fetchPriority: "high",
+        },
+      ],
     }),
   component: Home,
 });
@@ -220,6 +230,20 @@ function Home() {
             </li>
           ))}
         </ul>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Button asChild className="rounded-full">
+            <Link to="/web-design-development/full-stack-web-development">
+              Explore full-stack development
+              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/web-design-development/vibe-coding-ai-assisted-development">
+              Vibe coding &amp; AI-assisted development
+              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+            </Link>
+          </Button>
+        </div>
       </Section>
 
       <Section>
@@ -230,10 +254,13 @@ function Home() {
         />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {homeAutomationServices.map((service) => (
-            <article key={service.title} className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="font-display text-lg font-semibold">{service.title}</h3>
+            <Link key={service.title} to={service.to} className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary">
+              <h3 className="font-display text-lg font-semibold group-hover:text-primary">{service.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
-            </article>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-primary">
+                Explore <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
           ))}
         </div>
       </Section>
@@ -247,6 +274,8 @@ function Home() {
       <CTABand
         title="Ready to Grow Your Digital Presence?"
         text="Whether you need stronger search visibility, better advertising, engaging content, a new website, AI-search optimization, or business automation, AVR Web Consulting can help you build the right digital strategy."
+        ctaText="Book consultation"
+        showWhatsapp={true}
       />
     </>
   );

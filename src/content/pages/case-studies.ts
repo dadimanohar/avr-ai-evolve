@@ -20,6 +20,7 @@ export type CaseStudySeed = {
   resultRows: string[][];
   timeline: string;
   quote: { text: string; author: string };
+  takeaways: string[];
 };
 
 export const caseStudySeeds: CaseStudySeed[] = [
@@ -62,6 +63,12 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "We had spent two years buying traffic. AVR made the catalogue itself the traffic source, and now AI shopping assistants recommend us by name.",
       author: "Head of Growth, D2C home & living brand",
     },
+    takeaways: [
+      "Crawl waste is an invisible ceiling — resolving facet bloat before investing in new content is the highest-ROI move for large catalogues",
+      "Category pages written as genuine buying guides outperform thin product-list pages even against well-funded marketplaces",
+      "Product schema that publishes price, stock and ratings in machine-readable form is the entry ticket for AI shopping answer inclusion",
+      "Sustained authority building through relevant editorial links compounds alongside content work to produce gains that paid spend alone cannot replicate",
+    ],
   },
   {
     slug: "saas-ai-visibility-turnaround",
@@ -102,6 +109,12 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Buyers started arriving already convinced, because the AI they asked had quoted our benchmark study.",
       author: "VP Marketing, B2B workflow SaaS",
     },
+    takeaways: [
+      "Gated content and logins are invisible to AI crawlers — making documentation and pricing publicly accessible is a prerequisite, not an optional improvement",
+      "Entity consistency across Crunchbase, LinkedIn and Wikidata shapes how AI models resolve a brand and is far cheaper to fix than to ignore",
+      "Original benchmark studies with downloadable methodology become the most-cited assets in a programme, multiplying mentions across sources models trust",
+      "Monitoring specific buyer prompts monthly — not generic rankings — is the only reliable way to measure and improve AI assistant visibility",
+    ],
   },
   {
     slug: "multi-location-clinic-local-seo",
@@ -142,6 +155,12 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Our front desk noticed before the report did — the phone simply did not stop.",
       author: "Operations Director, multi-speciality clinic group",
     },
+    takeaways: [
+      "Duplicate and unclaimed Google Business Profiles actively suppress rankings — claiming and cleaning up all profiles before new work is non-negotiable in multi-location healthcare",
+      "A page per service per location, each with specific doctor bios, pricing guidance and FAQs, dramatically outperforms a single 'Services' page covering everything",
+      "Systematic review generation through compliant post-visit sequences can take a group from single-digit reviews to hundreds within months, shifting both map rankings and patient trust",
+      "Local citation accuracy across healthcare aggregators and Indian directories is the foundation — inconsistent NAP is the most common and most damaging omission in clinic SEO",
+    ],
   },
   {
     slug: "us-law-firm-national-seo",
@@ -182,6 +201,12 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "We stopped renting attention from Google Ads and started owning it.",
       author: "Managing Partner, US immigration law firm",
     },
+    takeaways: [
+      "Topic clusters built around visa categories, each with procedural sub-articles, create far more durable authority than standalone practice-area pages",
+      "E-E-A-T is not optional in legal search — attorney credentials, bar admissions and reviewed-by lines are the signals Google and AI engines require before citing legal content",
+      "Answer-first articles with extractable 45-word summaries are the format that wins both featured snippets and AI Overview citations simultaneously",
+      "Replacing a generic contact form with intake flows specific to each case type can lift form completion by over 30%, compounding the value of every organic session",
+    ],
   },
   {
     slug: "uae-real-estate-lead-generation",
@@ -222,6 +247,12 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Same budget, twice the meetings — and the meetings are with real buyers.",
       author: "Sales Director, Dubai property brokerage",
     },
+    takeaways: [
+      "Combining community-level organic content with tightly restructured paid campaigns produces synergistic effects neither channel achieves independently in competitive real estate markets",
+      "Arabic-language pages targeting locally-worded queries — not machine-translated versions of English content — drove a 320% increase in organic Arabic sessions because the query patterns differ materially",
+      "Feeding CRM-qualified lead data back into Google Ads bidding is the single fastest way to shift a campaign from optimising for clicks to optimising for actual sales conversations",
+      "RealEstateListing and Place schema make property inventory legible to both Google rich results and AI property research tools, opening a second visibility channel beyond portal listings",
+    ],
   },
   {
     slug: "uk-manufacturer-b2b-seo",
@@ -262,6 +293,12 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Engineers can finally find our tolerances without downloading a PDF — and so can Google.",
       author: "Marketing Manager, UK industrial manufacturer",
     },
+    takeaways: [
+      "A full 1:1 redirect map for every existing URL, staged launch and six weeks of daily post-launch monitoring are what allowed a 900-page migration to retain 100% of legacy rankings",
+      "Converting product specifications from locked PDFs into structured HTML tables with Product schema simultaneously opened the site to search indexing and to AI sourcing tools",
+      "Core Web Vitals improvements — LCP from 6.1s to 1.4s — matter more in B2B manufacturing than many assume, because procurement teams use slow networks on trade-show floors and factory floors",
+      "Organising content by application and problem rather than by product code is how engineer-led searches get captured before a competitor's catalogue does",
+    ],
   },
 ];
 
@@ -338,12 +375,7 @@ function caseStudyPage(seed: CaseStudySeed): PageContent {
         blocks: [
           {
             kind: "list",
-            items: [
-              "Fix retrieval and structure before adding volume — content on a broken foundation compounds nothing",
-              "Answer-first formatting is what makes a page quotable by both featured snippets and AI assistants",
-              "Attribution matters: measuring qualified outcomes, not raw traffic, is what changed the budget decisions",
-              "Compounding beats spikes — every month of manual work here raised the floor, not just the peak",
-            ],
+            items: seed.takeaways,
           },
         ],
       },
@@ -358,7 +390,7 @@ function caseStudyPage(seed: CaseStudySeed): PageContent {
       { question: "How were AI citations measured?", answer: "We ran a fixed monthly prompt set across ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews, recording whether the brand was named or linked." },
       { question: "Did rankings hold after the engagement?", answer: "Yes. Because the work is manual and policy-compliant, gains have held through subsequent core updates rather than reversing." },
       { question: "Do you share the client's name?", answer: "Only with written permission. Several clients prefer anonymity, so we describe the business type, market and verified metrics instead." },
-      { question: "How do I get an audit for my own site?", answer: "Request a free audit from the contact page. You will receive findings, priorities and a fixed monthly quote within one business day." },
+      { question: "How do I get an audit for my own site?", answer: "Request an audit from the contact page. You will receive findings, priorities and a fixed monthly quote within one business day." },
     ],
   };
 }
@@ -451,6 +483,6 @@ export const caseStudiesHub: PageContent = {
     { question: "Can you guarantee the same results for me?", answer: "No agency can guarantee specific rankings or revenue. We guarantee the method, the deliverables and transparent reporting against baselines we agree upfront." },
     { question: "Do you work with small budgets?", answer: "Yes. Our Starter plan is $100/month and is designed for single-location businesses who need local visibility rather than national campaigns." },
     { question: "Will you show my business as a case study?", answer: "Only with your written permission, and we can anonymise the brand while keeping verified metrics." },
-    { question: "How do I start a project like these?", answer: "Request a free audit on the contact page. We benchmark your site against competitors and send priorities plus a fixed monthly price within one business day." },
+    { question: "How do I start a project like these?", answer: "Request an audit on the contact page. We benchmark your site against competitors and send priorities plus a fixed monthly price within one business day." },
   ],
 };

@@ -25,6 +25,8 @@ import { Route as AiSeoAnswerEngineOptimizationRouteImport } from './routes/ai-s
 import { Route as AiSeoGeoSeoRouteImport } from './routes/ai-seo/geo-seo'
 import { Route as AiSeoLlmSeoRouteImport } from './routes/ai-seo/llm-seo'
 import { Route as AiSeoLlmoRouteImport } from './routes/ai-seo/llmo'
+import { Route as AutomationAiAgentsAiAgentDevelopmentRouteImport } from './routes/automation-ai-agents/ai-agent-development'
+import { Route as AutomationAiAgentsN8nAutomationRouteImport } from './routes/automation-ai-agents/n8n-automation'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies/index'
@@ -48,6 +50,8 @@ import { Route as SeoServicesLocalSeoRouteImport } from './routes/seo-services/l
 import { Route as SeoServicesTechnicalSeoRouteImport } from './routes/seo-services/technical-seo'
 import { Route as WebDesignDevelopmentIndexRouteImport } from './routes/web-design-development/index'
 import { Route as WebDesignDevelopmentEcommerceDevelopmentRouteImport } from './routes/web-design-development/ecommerce-development'
+import { Route as WebDesignDevelopmentFullStackWebDevelopmentRouteImport } from './routes/web-design-development/full-stack-web-development'
+import { Route as WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRouteImport } from './routes/web-design-development/vibe-coding-ai-assisted-development'
 import { Route as WebDesignDevelopmentWordpressDevelopmentRouteImport } from './routes/web-design-development/wordpress-development'
 
 const IndexRoute = IndexRouteImport.update({
@@ -132,6 +136,18 @@ const AiSeoLlmoRoute = AiSeoLlmoRouteImport.update({
   path: '/ai-seo/llmo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutomationAiAgentsAiAgentDevelopmentRoute =
+  AutomationAiAgentsAiAgentDevelopmentRouteImport.update({
+    id: '/automation-ai-agents/ai-agent-development',
+    path: '/automation-ai-agents/ai-agent-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AutomationAiAgentsN8nAutomationRoute =
+  AutomationAiAgentsN8nAutomationRouteImport.update({
+    id: '/automation-ai-agents/n8n-automation',
+    path: '/automation-ai-agents/n8n-automation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -256,6 +272,18 @@ const WebDesignDevelopmentEcommerceDevelopmentRoute =
     path: '/web-design-development/ecommerce-development',
     getParentRoute: () => rootRouteImport,
   } as any)
+const WebDesignDevelopmentFullStackWebDevelopmentRoute =
+  WebDesignDevelopmentFullStackWebDevelopmentRouteImport.update({
+    id: '/web-design-development/full-stack-web-development',
+    path: '/web-design-development/full-stack-web-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute =
+  WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRouteImport.update({
+    id: '/web-design-development/vibe-coding-ai-assisted-development',
+    path: '/web-design-development/vibe-coding-ai-assisted-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WebDesignDevelopmentWordpressDevelopmentRoute =
   WebDesignDevelopmentWordpressDevelopmentRouteImport.update({
     id: '/web-design-development/wordpress-development',
@@ -279,6 +307,8 @@ export interface FileRoutesByFullPath {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/automation-ai-agents/ai-agent-development': typeof AutomationAiAgentsAiAgentDevelopmentRoute
+  '/automation-ai-agents/n8n-automation': typeof AutomationAiAgentsN8nAutomationRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
@@ -294,6 +324,8 @@ export interface FileRoutesByFullPath {
   '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
   '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  '/web-design-development/full-stack-web-development': typeof WebDesignDevelopmentFullStackWebDevelopmentRoute
+  '/web-design-development/vibe-coding-ai-assisted-development': typeof WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
   '/blog/': typeof BlogIndexRoute
@@ -321,6 +353,8 @@ export interface FileRoutesByTo {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/automation-ai-agents/ai-agent-development': typeof AutomationAiAgentsAiAgentDevelopmentRoute
+  '/automation-ai-agents/n8n-automation': typeof AutomationAiAgentsN8nAutomationRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
@@ -336,6 +370,8 @@ export interface FileRoutesByTo {
   '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
   '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  '/web-design-development/full-stack-web-development': typeof WebDesignDevelopmentFullStackWebDevelopmentRoute
+  '/web-design-development/vibe-coding-ai-assisted-development': typeof WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo': typeof AiSeoIndexRoute
   '/blog': typeof BlogIndexRoute
@@ -364,6 +400,8 @@ export interface FileRoutesById {
   '/ai-seo/geo-seo': typeof AiSeoGeoSeoRoute
   '/ai-seo/llm-seo': typeof AiSeoLlmSeoRoute
   '/ai-seo/llmo': typeof AiSeoLlmoRoute
+  '/automation-ai-agents/ai-agent-development': typeof AutomationAiAgentsAiAgentDevelopmentRoute
+  '/automation-ai-agents/n8n-automation': typeof AutomationAiAgentsN8nAutomationRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
   '/content-marketing/blogging-copywriting': typeof ContentMarketingBloggingCopywritingRoute
@@ -379,6 +417,8 @@ export interface FileRoutesById {
   '/seo-services/local-seo': typeof SeoServicesLocalSeoRoute
   '/seo-services/technical-seo': typeof SeoServicesTechnicalSeoRoute
   '/web-design-development/ecommerce-development': typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  '/web-design-development/full-stack-web-development': typeof WebDesignDevelopmentFullStackWebDevelopmentRoute
+  '/web-design-development/vibe-coding-ai-assisted-development': typeof WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute
   '/web-design-development/wordpress-development': typeof WebDesignDevelopmentWordpressDevelopmentRoute
   '/ai-seo/': typeof AiSeoIndexRoute
   '/blog/': typeof BlogIndexRoute
@@ -408,6 +448,8 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/automation-ai-agents/ai-agent-development'
+    | '/automation-ai-agents/n8n-automation'
     | '/blog/$slug'
     | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
@@ -423,6 +465,8 @@ export interface FileRouteTypes {
     | '/seo-services/local-seo'
     | '/seo-services/technical-seo'
     | '/web-design-development/ecommerce-development'
+    | '/web-design-development/full-stack-web-development'
+    | '/web-design-development/vibe-coding-ai-assisted-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
     | '/blog/'
@@ -450,6 +494,8 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/automation-ai-agents/ai-agent-development'
+    | '/automation-ai-agents/n8n-automation'
     | '/blog/$slug'
     | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
@@ -465,6 +511,8 @@ export interface FileRouteTypes {
     | '/seo-services/local-seo'
     | '/seo-services/technical-seo'
     | '/web-design-development/ecommerce-development'
+    | '/web-design-development/full-stack-web-development'
+    | '/web-design-development/vibe-coding-ai-assisted-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo'
     | '/blog'
@@ -492,6 +540,8 @@ export interface FileRouteTypes {
     | '/ai-seo/geo-seo'
     | '/ai-seo/llm-seo'
     | '/ai-seo/llmo'
+    | '/automation-ai-agents/ai-agent-development'
+    | '/automation-ai-agents/n8n-automation'
     | '/blog/$slug'
     | '/case-studies/$slug'
     | '/content-marketing/blogging-copywriting'
@@ -507,6 +557,8 @@ export interface FileRouteTypes {
     | '/seo-services/local-seo'
     | '/seo-services/technical-seo'
     | '/web-design-development/ecommerce-development'
+    | '/web-design-development/full-stack-web-development'
+    | '/web-design-development/vibe-coding-ai-assisted-development'
     | '/web-design-development/wordpress-development'
     | '/ai-seo/'
     | '/blog/'
@@ -535,6 +587,8 @@ export interface RootRouteChildren {
   AiSeoGeoSeoRoute: typeof AiSeoGeoSeoRoute
   AiSeoLlmSeoRoute: typeof AiSeoLlmSeoRoute
   AiSeoLlmoRoute: typeof AiSeoLlmoRoute
+  AutomationAiAgentsAiAgentDevelopmentRoute: typeof AutomationAiAgentsAiAgentDevelopmentRoute
+  AutomationAiAgentsN8nAutomationRoute: typeof AutomationAiAgentsN8nAutomationRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
   ContentMarketingBloggingCopywritingRoute: typeof ContentMarketingBloggingCopywritingRoute
@@ -550,6 +604,8 @@ export interface RootRouteChildren {
   SeoServicesLocalSeoRoute: typeof SeoServicesLocalSeoRoute
   SeoServicesTechnicalSeoRoute: typeof SeoServicesTechnicalSeoRoute
   WebDesignDevelopmentEcommerceDevelopmentRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRoute
+  WebDesignDevelopmentFullStackWebDevelopmentRoute: typeof WebDesignDevelopmentFullStackWebDevelopmentRoute
+  WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute: typeof WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute
   WebDesignDevelopmentWordpressDevelopmentRoute: typeof WebDesignDevelopmentWordpressDevelopmentRoute
   AiSeoIndexRoute: typeof AiSeoIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -674,6 +730,20 @@ declare module '@tanstack/react-router' {
       path: '/ai-seo/llmo'
       fullPath: '/ai-seo/llmo'
       preLoaderRoute: typeof AiSeoLlmoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automation-ai-agents/ai-agent-development': {
+      id: '/automation-ai-agents/ai-agent-development'
+      path: '/automation-ai-agents/ai-agent-development'
+      fullPath: '/automation-ai-agents/ai-agent-development'
+      preLoaderRoute: typeof AutomationAiAgentsAiAgentDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automation-ai-agents/n8n-automation': {
+      id: '/automation-ai-agents/n8n-automation'
+      path: '/automation-ai-agents/n8n-automation'
+      fullPath: '/automation-ai-agents/n8n-automation'
+      preLoaderRoute: typeof AutomationAiAgentsN8nAutomationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -837,6 +907,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebDesignDevelopmentEcommerceDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/web-design-development/full-stack-web-development': {
+      id: '/web-design-development/full-stack-web-development'
+      path: '/web-design-development/full-stack-web-development'
+      fullPath: '/web-design-development/full-stack-web-development'
+      preLoaderRoute: typeof WebDesignDevelopmentFullStackWebDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/web-design-development/vibe-coding-ai-assisted-development': {
+      id: '/web-design-development/vibe-coding-ai-assisted-development'
+      path: '/web-design-development/vibe-coding-ai-assisted-development'
+      fullPath: '/web-design-development/vibe-coding-ai-assisted-development'
+      preLoaderRoute: typeof WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/web-design-development/wordpress-development': {
       id: '/web-design-development/wordpress-development'
       path: '/web-design-development/wordpress-development'
@@ -863,6 +947,9 @@ const rootRouteChildren: RootRouteChildren = {
   AiSeoGeoSeoRoute: AiSeoGeoSeoRoute,
   AiSeoLlmSeoRoute: AiSeoLlmSeoRoute,
   AiSeoLlmoRoute: AiSeoLlmoRoute,
+  AutomationAiAgentsAiAgentDevelopmentRoute:
+    AutomationAiAgentsAiAgentDevelopmentRoute,
+  AutomationAiAgentsN8nAutomationRoute: AutomationAiAgentsN8nAutomationRoute,
   BlogSlugRoute: BlogSlugRoute,
   CaseStudiesSlugRoute: CaseStudiesSlugRoute,
   ContentMarketingBloggingCopywritingRoute:
@@ -882,6 +969,10 @@ const rootRouteChildren: RootRouteChildren = {
   SeoServicesTechnicalSeoRoute: SeoServicesTechnicalSeoRoute,
   WebDesignDevelopmentEcommerceDevelopmentRoute:
     WebDesignDevelopmentEcommerceDevelopmentRoute,
+  WebDesignDevelopmentFullStackWebDevelopmentRoute:
+    WebDesignDevelopmentFullStackWebDevelopmentRoute,
+  WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute:
+    WebDesignDevelopmentVibeCodingAiAssistedDevelopmentRoute,
   WebDesignDevelopmentWordpressDevelopmentRoute:
     WebDesignDevelopmentWordpressDevelopmentRoute,
   AiSeoIndexRoute: AiSeoIndexRoute,

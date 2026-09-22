@@ -17,7 +17,7 @@ export const pricingPage: PageContent = {
     { label: "Starting price", value: "$100/mo" },
     { label: "Contract", value: "Month-to-month" },
     { label: "Setup fee", value: "$0" },
-    { label: "First audit", value: "Free" },
+    { label: "First audit", value: "On request" },
   ],
   serviceName: "SEO and AI SEO packages",
   breadcrumb: [
@@ -123,7 +123,7 @@ export const pricingPage: PageContent = {
         {
           kind: "steps",
           items: [
-            { title: "Free audit first", text: "We never quote before auditing. You get findings and priorities before you pay anything." },
+            { title: "Audit first", text: "We never quote before auditing. You get findings and priorities before you pay anything." },
             { title: "Manual, safe execution", text: "No automated link spam, no AI-dumped content. Every change is reviewed by a human." },
             { title: "Monthly reporting call", text: "Rankings, traffic, conversions and AI citations in one plain-language report." },
             { title: "Direct access", text: "WhatsApp and email access to the strategist actually doing the work." },
@@ -242,7 +242,7 @@ export const aboutPage: PageContent = {
     { question: "Do you work with international clients?", answer: "Yes. Roughly half our work is outside India, across the US, UK, UAE and Europe. We handle timezone overlap, currency billing and market-specific search behaviour." },
     { question: "Is your work safe from Google penalties?", answer: "Yes. Everything we do follows Google's spam policies — manual outreach for links, original human-edited content and no manipulative tactics." },
     { question: "How do you report progress?", answer: "A monthly report and call covering rankings, organic traffic, conversions, technical health and AI citation share, written in plain language with the next month's priorities." },
-    { question: "How do I start working with AVR?", answer: "Request a free audit through the contact page. We review your site and competitors, send findings and a fixed monthly quote, and start once you approve." },
+    { question: "How do I start working with AVR?", answer: "Request an audit through the contact page. We review your site and competitors, send findings and a fixed monthly quote, and start once you approve." },
     { question: "Do you offer one-off projects?", answer: "Yes. Audits, website builds, migrations and content packages are available as fixed-price one-off projects without a retainer." },
   ],
 };

@@ -24,28 +24,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-      <div className="hidden bg-ink text-ink-foreground lg:block">
-        <div className="container-page flex h-9 items-center justify-between text-xs">
-          <p>Hybrid SEO + AI visibility · Visakhapatnam · Serving India, US, UK, UAE & Europe</p>
-          <div className="flex items-center gap-5">
-            <a className="hover:text-primary" href={`mailto:${business.email}`}>
-              {business.email}
-            </a>
-            <a className="hover:text-primary" href={business.phoneHref}>
-              {business.phone}
-            </a>
-          </div>
-        </div>
-      </div>
 
       <div className="container-page flex h-16 items-center justify-between gap-4 lg:h-20">
         <Link to="/" className="flex items-center gap-3" aria-label={`${business.name} home`}>
           <img
             src={logo.url}
             alt="AVR Web Consulting logo"
-            width={44}
-            height={44}
-            className="h-10 w-10 rounded-full object-cover ring-2 ring-primary/40 lg:h-11 lg:w-11"
+            width={40}
+            height={40}
+            className="h-9 w-9 rounded-lg object-cover ring-2 ring-primary/40 lg:h-10 lg:w-10"
           />
           <span className="leading-tight">
             <span className="block font-display text-base font-bold tracking-tight lg:text-lg">
@@ -98,7 +85,7 @@ export function Header() {
             {business.phone}
           </a>
           <Button asChild className="rounded-full">
-            <Link to="/contact">Free audit</Link>
+            <Link to="/contact">Request audit</Link>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -151,7 +138,7 @@ export function Header() {
                 </Accordion>
                 <Button asChild className="mt-6 w-full rounded-full">
                   <Link to="/contact" onClick={() => setOpen(false)}>
-                    Book a free consultation
+                    Book a consultation
                   </Link>
                 </Button>
               </div>

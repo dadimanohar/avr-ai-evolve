@@ -10,6 +10,7 @@ type HeadInput = {
   image?: string;
   noindex?: boolean;
   schemas?: Record<string, unknown>[];
+  links?: Record<string, string>[];
 };
 
 export const ORG_ID = "https://avrwebconsulting.com/#organization";
@@ -168,6 +169,7 @@ export function buildHead({
   image,
   noindex,
   schemas = [],
+  links = [],
 }: HeadInput) {
   const meta: Record<string, string>[] = [
     { title },
@@ -193,7 +195,7 @@ export function buildHead({
 
   return {
     meta,
-    links: [{ rel: "canonical", href: path }],
+    links: [{ rel: "canonical", href: path }, ...(links || [])],
     scripts: schemas.map((s) => ({
       type: "application/ld+json",
       children: JSON.stringify(s),

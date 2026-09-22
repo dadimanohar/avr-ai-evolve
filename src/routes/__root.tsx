@@ -130,6 +130,8 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { FloatingContact } from "@/components/site/FloatingContact";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -142,6 +144,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <FloatingContact />
       </div>
     </QueryClientProvider>
   );
