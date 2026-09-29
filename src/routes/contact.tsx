@@ -13,7 +13,7 @@ const contactPage: PageContent = {
   eyebrow: "Contact",
   serviceName: "SEO and AI SEO consulting",
   answer: `Contact AVR Web Consulting by email at ${business.email}, by phone on ${business.phone}, or on WhatsApp. We reply within one business day, work ${business.hours}, and offer an SEO and AI visibility audit covering technical health, rankings and AI answer citations.`,
-  hero: { image: team.url, imageAlt: "AVR Web Consulting team reviewing client campaigns" },
+  hero: { image: "/images/team-video-call-meeting.webp", imageAlt: "Contact AVR Web Consulting — SEO & AI Visibility Audit illustration" },
   highlights: [
     { label: "Response time", value: "< 24 hrs" },
     { label: "Audit", value: "On request" },
@@ -42,6 +42,9 @@ const contactPage: PageContent = {
             ["WhatsApp", business.phone, "Ongoing client updates"],
             ["Office", fullAddress, "In-person meetings in Visakhapatnam"],
           ],
+        },
+        {
+          kind: "social",
         },
         {
           kind: "callout",

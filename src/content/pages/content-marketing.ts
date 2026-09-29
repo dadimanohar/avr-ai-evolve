@@ -16,7 +16,7 @@ export const contentMarketingHub: PageContent = {
   serviceName: "Content Marketing",
   answer:
     "AVR Web Consulting produces answer-first content: every page opens with a 40–60 word direct answer, then delivers depth through structured sections, tables, steps and FAQs. That shape ranks in Google and is the exact format large language models extract and cite when answering buyer questions.",
-  hero: { image: aiSearch.url, imageAlt: "AI-assisted search and content retrieval concept" },
+  hero: { image: "/images/seo-content-marketing.webp", imageAlt: "Content Marketing Services — Answer-First Content | AVR Web Consulting illustration" },
   highlights: [
     { label: "Words / article", value: "1,500–3,000" },
     { label: "Guest posts from", value: "$20" },
@@ -30,7 +30,19 @@ export const contentMarketingHub: PageContent = {
     { label: "LLM SEO", to: "/ai-seo/llm-seo" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Content Marketing Services — Answer-First Content",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "answer-first",
       heading: "Why answer-first content wins twice",
       blocks: [
@@ -114,7 +126,7 @@ export const bloggingCopywriting: PageContent = {
   serviceName: "Blogging and Copywriting",
   answer:
     "AVR Web Consulting writes blog articles, pillar pages, service copy and product descriptions using an answer-first structure: a direct opening answer, scannable question headings, tables, steps and a page-specific FAQ block with schema. Every piece is written by a human and reviewed for factual accuracy before publication.",
-  hero: { image: laptopWork.url, imageAlt: "Writer drafting SEO content on a laptop" },
+  hero: { image: "/images/web-copywriting-illustration.webp", imageAlt: "Blogging & Copywriting Services | AVR Web Consulting illustration" },
   highlights: [
     { label: "From", value: "$250/mo" },
     { label: "Turnaround", value: "5 days" },
@@ -128,7 +140,19 @@ export const bloggingCopywriting: PageContent = {
     { label: "SEO services", to: "/seo-services" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Blogging & Copywriting Services",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "formats",
       heading: "Content formats we write",
       blocks: [
@@ -214,7 +238,7 @@ export const guestPostingLinkBuilding: PageContent = {
   serviceName: "Guest Posting and Link Building",
   answer:
     "AVR Web Consulting builds links manually through editorial guest posts, niche placements and digital PR on real, indexed websites with genuine traffic. Every placement is reported with the live URL, domain metrics and anchor text. We do not use private blog networks, automated tools or link farms.",
-  hero: { image: teamMeeting.url, imageAlt: "Outreach and link building strategy session" },
+  hero: { image: "/images/link-building.webp", imageAlt: "Guest Posting & Manual Link Building from $20 | AVR Web Consulting illustration" },
   highlights: [
     { label: "Placements from", value: "$20" },
     { label: "Manual outreach", value: "100%" },
@@ -228,7 +252,19 @@ export const guestPostingLinkBuilding: PageContent = {
     { label: "AI citations & mentions", to: "/ai-seo/ai-citations-mentions" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Guest Posting & Manual Link Building from $20",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "what-we-do",
       heading: "How we earn links",
       blocks: [

@@ -18,7 +18,7 @@ export const seoServicesHub: PageContent = {
   serviceName: "Search Engine Optimization",
   answer:
     "AVR Web Consulting provides four core SEO services: global SEO for multi-country organic growth, local SEO for map and near-me visibility, technical SEO for crawlability and Core Web Vitals, and GEO targeting for city-level rankings. Packages start at $200 per month with manual, penalty-safe execution.",
-  hero: { image: seoConcept.url, imageAlt: "SEO strategy illustration with search, analytics and ranking icons" },
+  hero: { image: "/images/seo-typing-laptop.webp", imageAlt: "SEO Services — Global, Local, Technical & GEO | AVR Web Consulting illustration" },
   highlights: [
     { label: "Starting price", value: "$200/mo" },
     { label: "Citations live in", value: "3 days" },
@@ -32,7 +32,19 @@ export const seoServicesHub: PageContent = {
     { label: "Pricing", to: "/pricing" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for SEO Services — Global, Local, Technical & GEO",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "what-you-get",
       heading: "What our SEO services include",
       blocks: [
@@ -136,7 +148,7 @@ export const globalSeo: PageContent = {
   serviceName: "Global SEO",
   answer:
     "Global SEO makes one website rank in several countries at once. AVR Web Consulting builds the country and language architecture, hreflang tags, localised keyword sets and market-specific links required for a single domain to compete in US, UK, UAE and European search results.",
-  hero: { image: laptopWork.url, imageAlt: "Marketer reviewing international website performance on a laptop" },
+  hero: { image: "/images/digital-marketing.webp", imageAlt: "Global SEO Services for US, UK, UAE & Europe | AVR Web Consulting illustration" },
   highlights: [
     { label: "From", value: "$200/mo" },
     { label: "Markets", value: "US · UK · UAE · EU" },
@@ -150,7 +162,19 @@ export const globalSeo: PageContent = {
     { label: "LLM SEO", to: "/ai-seo/llm-seo" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Global SEO Services for US, UK, UAE & Europe",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "definition",
       heading: "What is global SEO?",
       blocks: [
@@ -227,7 +251,7 @@ export const localSeo: PageContent = {
   serviceName: "Local SEO",
   answer:
     "Local SEO makes your business appear when nearby customers search. AVR Web Consulting optimises your Google Business Profile, builds manually verified local citations within three days, fixes NAP consistency, and targets 'near me' and 'service + city' keywords from $100 per month.",
-  hero: { image: entrepreneur.url, imageAlt: "Business owner reviewing local search performance at a desk" },
+  hero: { image: "/images/local-seo-new.webp", imageAlt: "Local SEO Services from $100/month | AVR Web Consulting illustration" },
   highlights: [
     { label: "From", value: "$100/mo" },
     { label: "Citations live", value: "3 days" },
@@ -241,7 +265,19 @@ export const localSeo: PageContent = {
     { label: "Locations we serve", to: "/locations" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Local SEO Services from $100/month",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "how-it-works",
       heading: "How local ranking actually works",
       blocks: [
@@ -298,7 +334,7 @@ export const technicalSeo: PageContent = {
   serviceName: "Technical SEO",
   answer:
     "Technical SEO ensures search engines and AI crawlers can find, render, understand and index every important page. AVR Web Consulting audits crawlability, indexation, speed, structured data and rendering, then ships the critical fixes within one week of approval.",
-  hero: { image: laptopWork.url, imageAlt: "Developer auditing website technical performance" },
+  hero: { image: "/images/analytics-yearly-growth-2025.webp", imageAlt: "Technical SEO Services & Site Audits | AVR Web Consulting illustration" },
   highlights: [
     { label: "Audit delivery", value: "5 days" },
     { label: "Critical fixes", value: "1 week" },
@@ -312,7 +348,19 @@ export const technicalSeo: PageContent = {
     { label: "Web design & development", to: "/web-design-development" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Technical SEO Services & Site Audits",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "audit",
       heading: "What our technical audit covers",
       blocks: [
@@ -367,7 +415,7 @@ export const geoTargetingSeo: PageContent = {
   serviceName: "GEO Targeting SEO",
   answer:
     "GEO targeting SEO wins searches that include a place name, such as 'SEO agency Delhi' or 'web design Bangalore'. AVR Web Consulting builds unique city landing pages with local proof, geo schema and city-specific links so each metro ranks independently rather than competing with itself.",
-  hero: { image: teamMeeting.url, imageAlt: "Marketing team planning city-level campaign strategy" },
+  hero: { image: "/images/glowing-ai-brain.webp", imageAlt: "GEO Targeting SEO for Indian Metro Cities | AVR Web Consulting illustration" },
   highlights: [
     { label: "Cities covered", value: "8 metros" },
     { label: "Page build", value: "5–7 days" },
@@ -381,7 +429,19 @@ export const geoTargetingSeo: PageContent = {
     { label: "Locations we serve", to: "/locations" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for GEO Targeting SEO for Indian Metro Cities",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "what",
       heading: "What GEO targeting means in search",
       blocks: [
@@ -429,7 +489,7 @@ export const localCitationsGmb: PageContent = {
   serviceName: "Local Citations and GMB Optimisation",
   answer:
     "Local citations are consistent listings of your business name, address and phone number across directories. AVR Web Consulting builds 30–60 manual citations within three days, cleans conflicting listings, and fully optimises your Google Business Profile for categories, services, posts and reviews.",
-  hero: { image: aiSearch.url, imageAlt: "Search interface concept representing local discovery" },
+  hero: { image: "/images/online-learning-video-call.webp", imageAlt: "Local Citations & Google Business Profile Optimisation | AVR illustration" },
   highlights: [
     { label: "Turnaround", value: "3 days" },
     { label: "Placement", value: "100% manual" },
@@ -443,7 +503,19 @@ export const localCitationsGmb: PageContent = {
     { label: "Pricing", to: "/pricing" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Local Citations & Google Business Profile Optimisation",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "why",
       heading: "Why citations still matter",
       blocks: [
