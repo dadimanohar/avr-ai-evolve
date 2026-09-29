@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import type { ContentBlock, Faq, PageSection } from "@/content/types";
 import { business } from "@/content/site";
 import { Button } from "@/components/ui/button";
+import { SocialLinks } from "@/components/site/SocialLinks";
 import {
   Accordion,
   AccordionContent,
@@ -192,6 +193,13 @@ export function Blocks({ blocks }: { blocks: ContentBlock[] }) {
                   </tbody>
                 </table>
               </div>
+            </div>
+          );
+
+        if (block.kind === "social")
+          return (
+            <div key={i} className="mt-4">
+              <SocialLinks variant="dark" />
             </div>
           );
 

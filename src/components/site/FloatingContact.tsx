@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { business } from "@/content/site";
 
 export function FloatingContact() {
@@ -7,15 +7,20 @@ export function FloatingContact() {
   )}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 md:bottom-8 md:right-8">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3 md:bottom-8 md:right-8">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
+        className="flex h-[50px] w-[50px] md:h-[56px] md:w-[56px] items-center justify-center rounded-full bg-transparent transition-transform duration-300 hover:scale-[1.08] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
+        style={{ filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.25))" }}
       >
-        <MessageCircle className="h-6 w-6" aria-hidden="true" />
+        <img 
+          src="/whatsapp-logo.png" 
+          alt="Chat on WhatsApp" 
+          className="h-full w-full object-contain border-none p-0 bg-transparent" 
+        />
       </a>
       <a
         href={business.phoneHref}

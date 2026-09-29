@@ -21,6 +21,12 @@ export const business = {
   geo: { lat: 17.7231, lng: 83.3012 },
   hours: "Mon–Sat 09:30–19:00 IST",
   priceRange: "$$",
+  social: {
+    linkedin: "https://www.linkedin.com/company/avr-webconsulting/",
+    x: "https://x.com/avrwebconsult",
+    instagram: "https://www.instagram.com/avrwebconsulting/",
+    facebook: "https://www.facebook.com/avrwebconsulting",
+  },
 } as const;
 
 export const fullAddress = `${business.address.street}, ${business.address.city} – ${business.address.postalCode}, ${business.address.region}, ${business.address.countryName}`;

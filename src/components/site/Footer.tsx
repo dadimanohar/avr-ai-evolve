@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-import logo from "@/assets/avr-logo.jpg.asset.json";
 import { business, footerColumns, fullAddress } from "@/content/site";
+import { SocialLinks } from "@/components/site/SocialLinks";
 
 export function Footer() {
   return (
@@ -12,9 +12,9 @@ export function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-3">
               <img
-                src={logo.url}
+                src="/1790648464804.png"
                 alt="AVR Web Consulting logo"
-                className="h-11 w-11 rounded-lg"
+                className="h-12 w-auto object-contain bg-transparent"
                 loading="lazy"
               />
               <span className="font-display text-lg font-bold">{business.name}</span>
@@ -39,6 +39,10 @@ export function Footer() {
               </p>
               <p className="text-ink-foreground/60">{business.hours}</p>
             </address>
+            <div className="mt-8 flex flex-col items-center lg:items-start">
+              <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-primary mb-4">Follow Us</h2>
+              <SocialLinks variant="light" className="justify-center lg:justify-start" />
+            </div>
           </div>
 
           <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">

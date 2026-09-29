@@ -30,7 +30,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "E-commerce",
     location: "Mumbai, India",
     service: "Technical SEO + content + AI SEO",
-    image: laptopWork.url,
+    image: "/images/google-ads-for-seo.webp",
     summary:
       "A 2,400-SKU home décor store grew organic revenue 212% in nine months after we fixed crawl waste, rebuilt category content and made product data machine-readable for AI shopping answers.",
     challenge: [
@@ -76,7 +76,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "SaaS",
     location: "Bengaluru, India / US market",
     service: "AI SEO (AEO, GEO, LLMO)",
-    image: aiSearch.url,
+    image: "/images/ai-cpu-board-contact.webp",
     summary:
       "A B2B SaaS platform went from zero AI assistant mentions to being cited in 61% of tracked buying prompts in six months, lifting assisted pipeline by 38%.",
     challenge: [
@@ -122,7 +122,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Healthcare",
     location: "Hyderabad & Visakhapatnam, India",
     service: "Local SEO + GMB",
-    image: teamMeeting.url,
+    image: "/images/neural-network-lightbulb.webp",
     summary:
       "Six clinic locations moved into the map pack for their core treatments, tripling appointment calls from Google in five months with zero paid spend.",
     challenge: [
@@ -168,7 +168,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Legal services",
     location: "United States",
     service: "National SEO + content",
-    image: entrepreneur.url,
+    image: "/images/gmb-citation-map.webp",
     summary:
       "A US immigration law firm reached page one for 87 high-intent visa terms and cut cost per qualified consultation by 61% versus their previous paid-only model.",
     challenge: [
@@ -214,7 +214,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Real estate",
     location: "Dubai, UAE",
     service: "SEO + Google Ads",
-    image: seoConcept.url,
+    image: "/images/lead-generation-phone-laptop.webp",
     summary:
       "A Dubai brokerage combined community-level SEO with tightly matched Google Ads to cut cost per qualified lead by 47% while doubling organic enquiries.",
     challenge: [
@@ -260,7 +260,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Manufacturing",
     location: "United Kingdom",
     service: "Technical SEO + web rebuild",
-    image: aiRetrieval.url,
+    image: "/images/local-citation-directory-listing.webp",
     summary:
       "A UK manufacturer replaced a 900-page legacy site with a fast, structured catalogue and grew RFQ submissions 176% without losing a single legacy ranking.",
     challenge: [
@@ -325,7 +325,19 @@ function caseStudyPage(seed: CaseStudySeed): PageContent {
       { label: "AI SEO", to: "/ai-seo" },
     ],
     sections: [
-      {
+      
+    {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Crawl control",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
         id: "snapshot",
         heading: "Client snapshot",
         blocks: [
@@ -410,7 +422,7 @@ export const caseStudiesHub: PageContent = {
     "Six documented AVR Web Consulting engagements across e-commerce, SaaS, healthcare, legal, real estate and manufacturing — with before-and-after metrics for traffic, leads, revenue and AI citations.",
   answer:
     "AVR Web Consulting case studies document real client outcomes: 212% organic revenue growth for a D2C store, 61% AI prompt citation rate for a B2B SaaS, 218% more calls for a clinic group, and 47% lower cost per lead for a Dubai brokerage. Every metric is measured before and after.",
-  hero: { image: teamMeeting.url, imageAlt: "AVR Web Consulting team reviewing client performance data" },
+  hero: { image: "/images/team-collaboration-tablet.webp", imageAlt: "SEO & AI SEO Case Studies — Real Client Results | AVR Web Consulting illustration" },
   highlights: [
     { label: "Documented projects", value: "6" },
     { label: "Industries covered", value: "6" },
@@ -429,7 +441,19 @@ export const caseStudiesHub: PageContent = {
     { label: "AI SEO", to: "/ai-seo" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for SEO & AI SEO Case Studies — Real Client Results",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "overview",
       heading: "Results at a glance",
       blocks: [

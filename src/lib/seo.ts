@@ -40,6 +40,14 @@ export function organizationSchema() {
     },
     areaServed: [
       "India",
+      "Visakhapatnam",
+      "Delhi",
+      "Mumbai",
+      "Bangalore",
+      "Hyderabad",
+      "Chennai",
+      "Pune",
+      "Kolkata",
       "United States",
       "United Kingdom",
       "United Arab Emirates",
@@ -54,8 +62,12 @@ export function organizationSchema() {
       "Local SEO",
       "Technical SEO",
       "Link Building",
+      "Web Development",
+      "Business Automation",
+      "E-commerce"
     ],
     openingHours: "Mo-Sa 09:30-19:00",
+    sameAs: Object.values(business.social),
   };
 }
 
@@ -104,6 +116,8 @@ export function serviceSchema(input: {
   description: string;
   path: string;
   serviceType?: string;
+  about?: string[];
+  mentions?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -113,7 +127,9 @@ export function serviceSchema(input: {
     serviceType: input.serviceType ?? input.name,
     url: input.path,
     provider: { "@id": ORG_ID },
-    areaServed: ["India", "United States", "United Kingdom", "United Arab Emirates", "Europe"],
+    areaServed: ["India", "Visakhapatnam", "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Kolkata", "United States", "United Kingdom", "United Arab Emirates", "Europe"],
+    about: input.about?.map(name => ({ "@type": "Thing", name })) || [],
+    mentions: input.mentions?.map(name => ({ "@type": "Thing", name })) || [],
   };
 }
 
@@ -124,6 +140,8 @@ export function articleSchema(input: {
   datePublished: string;
   dateModified?: string;
   author?: string;
+  about?: string[];
+  mentions?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -136,6 +154,8 @@ export function articleSchema(input: {
     author: { "@type": "Organization", name: input.author ?? business.name },
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: input.path,
+    about: input.about?.map(name => ({ "@type": "Thing", name })) || [],
+    mentions: input.mentions?.map(name => ({ "@type": "Thing", name })) || [],
   };
 }
 

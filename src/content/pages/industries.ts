@@ -570,7 +570,19 @@ function industryPage(s: IndustrySeed, index: number): PageContent {
       { label: "Pricing", to: "/pricing" },
     ],
     sections: [
-      {
+      
+    {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Own the comparison layer",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
         id: "search-behaviour",
         heading: `How ${s.name.toLowerCase()} buyers actually search in 2026`,
         blocks: [
@@ -655,7 +667,7 @@ export const industriesHub: PageContent = {
   serviceName: "Industry SEO Services",
   answer:
     "AVR Web Consulting serves ten core industries — startups, e-commerce, healthcare, fashion and retail, SaaS and tech, real estate, education, travel, legal and manufacturing. Each programme is built around that sector's buyer intent, decision cycle, compliance constraints and the structured data AI engines need to cite you.",
-  hero: { image: teamMeeting.url, imageAlt: "Consulting team planning an industry SEO programme" },
+  hero: { image: "/images/industries-handshake.webp", imageAlt: "Industries We Serve — SEO & AI Visibility by Sector | AVR Web Consulting illustration" },
   highlights: [
     { label: "Industries served", value: "10+" },
     { label: "Markets", value: "India + global" },
@@ -668,7 +680,19 @@ export const industriesHub: PageContent = {
   ],
   related: industrySeeds.map((s) => ({ label: s.name, to: `/industries/${s.slug}` })),
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Industries We Serve — SEO & AI Visibility by Sector",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "why-sector",
       heading: "Why sector-specific SEO beats a generic retainer",
       blocks: [

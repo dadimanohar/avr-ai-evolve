@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, ChevronDown, X } from "lucide-react";
+import { Menu, ChevronDown, X } from "lucide-react";
 import { useState } from "react";
 
-import logo from "@/assets/avr-logo.jpg.asset.json";
 import { navigation, business } from "@/content/site";
 import { Button } from "@/components/ui/button";
+import { SocialLinks } from "@/components/site/SocialLinks";
 import {
   Sheet,
   SheetContent,
@@ -23,22 +23,19 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 font-sans backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="container-page flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Link to="/" className="flex items-center gap-3" aria-label={`${business.name} home`}>
+        <Link to="/" className="flex items-center gap-[10px]" aria-label={`${business.name} home`}>
           <img
-            src={logo.url}
+            src="/1790648464804.png"
             alt="AVR Web Consulting logo"
-            width={40}
-            height={40}
-            className="h-9 w-9 rounded-lg object-cover ring-2 ring-primary/40 lg:h-10 lg:w-10"
+            className="h-[44px] w-auto bg-transparent object-contain md:h-[48px]"
           />
-          <span className="leading-tight">
-            <span className="block font-display text-base font-bold tracking-tight lg:text-lg">
+          <span className="flex flex-col justify-center">
+            <span className="whitespace-nowrap text-[17px] font-[700] leading-[1.1] tracking-[-0.2px] lg:text-[20px]">
               AVR Web Consulting
             </span>
-            <span className="hidden text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:block">
+            <span className="mt-[3px] whitespace-nowrap text-[10px] font-[600] uppercase tracking-[1.5px] text-muted-foreground sm:text-[11px]">
               SEO · AI Visibility
             </span>
           </span>
@@ -49,7 +46,7 @@ export function Header() {
             <div key={group.label} className="group relative">
               <Link
                 to={group.to}
-                className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                className="flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-sm font-[500] text-foreground transition-colors hover:bg-accent hover:text-accent-foreground xl:px-3"
                 activeProps={{ className: "bg-accent text-accent-foreground" }}
               >
                 {group.label}
@@ -77,14 +74,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={business.phoneHref}
-            className="hidden items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors hover:border-primary hover:text-primary md:inline-flex"
-          >
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            {business.phone}
-          </a>
-          <Button asChild className="rounded-full">
+          <Button asChild className="rounded-full font-[600]">
             <Link to="/contact">Request audit</Link>
           </Button>
 
@@ -97,7 +87,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full overflow-y-auto sm:max-w-md">
               <SheetHeader className="flex-row items-center justify-between space-y-0">
-                <SheetTitle className="font-display">Menu</SheetTitle>
+                <SheetTitle className="font-sans">Menu</SheetTitle>
                 <button onClick={() => setOpen(false)} aria-label="Close menu">
                   <X className="h-5 w-5" />
                 </button>
@@ -106,7 +96,7 @@ export function Header() {
                 <Accordion type="multiple">
                   {navigation.map((group) => (
                     <AccordionItem key={group.label} value={group.label}>
-                      <AccordionTrigger className="font-display text-base">
+                      <AccordionTrigger className="font-sans text-base font-[500]">
                         {group.label}
                       </AccordionTrigger>
                       <AccordionContent>
@@ -136,11 +126,18 @@ export function Header() {
                     </AccordionItem>
                   ))}
                 </Accordion>
-                <Button asChild className="mt-6 w-full rounded-full">
+                <Button asChild className="mt-6 w-full rounded-full font-[600]">
                   <Link to="/contact" onClick={() => setOpen(false)}>
                     Book a consultation
                   </Link>
                 </Button>
+
+                <div className="mt-8 flex flex-col items-center border-t border-border pt-8">
+                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                    Follow Us
+                  </h3>
+                  <SocialLinks variant="dark" />
+                </div>
               </div>
             </SheetContent>
           </Sheet>

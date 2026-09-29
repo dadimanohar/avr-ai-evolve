@@ -326,7 +326,19 @@ function locationPage(s: LocationSeed, index: number): PageContent {
       { label: "Pricing", to: "/pricing" },
     ],
     sections: [
-      {
+      
+    {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Sectors we serve here",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
         id: "market",
         heading: `The search market in ${label}`,
         blocks: [
@@ -424,7 +436,7 @@ export const locationsHub: PageContent = {
   serviceName: "SEO Services by Location",
   answer:
     "AVR Web Consulting is headquartered in Visakhapatnam, India and serves clients across eight Indian metros plus the United States, United Kingdom, United Arab Emirates and Europe. Each market gets locality-specific content, LocalBusiness schema with geo-coordinates and AI visibility tracking tuned to local query patterns.",
-  hero: { image: entrepreneur.url, imageAlt: "Consultant reviewing global SEO performance" },
+  hero: { image: "/images/locations-map-new.webp", imageAlt: "Locations We Serve — SEO Company in India, USA, UK, UAE & Europe | AVR illustration" },
   highlights: [
     { label: "Head office", value: "Visakhapatnam" },
     { label: "Indian metros", value: "8" },
@@ -440,7 +452,19 @@ export const locationsHub: PageContent = {
     to: `/locations/${s.slug}`,
   })),
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Locations We Serve — SEO Company in India, USA, UK, UAE & Europe",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "india",
       heading: "SEO services across Indian metros",
       blocks: [

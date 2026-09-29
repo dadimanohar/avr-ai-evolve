@@ -12,7 +12,7 @@ export const pricingPage: PageContent = {
     "Fixed monthly SEO, AI SEO, ads, content and web design pricing from AVR Web Consulting. Plans start at $100/month with no lock-in contracts, manual safe work and monthly reporting.",
   answer:
     "AVR Web Consulting's SEO plans start at $100/month for local businesses, $300/month for growth-stage brands and $600/month for enterprise or multi-location programs. AI SEO add-ons start at $150/month. Every plan is month-to-month, includes manual white-hat work, and carries no setup fee.",
-  hero: { image: entrepreneur.url, imageAlt: "Business owner reviewing an SEO pricing plan" },
+  hero: { image: "/images/pricing-blocks.webp", imageAlt: "SEO & AI SEO Pricing in India — Plans From $100/Month | AVR illustration" },
   highlights: [
     { label: "Starting price", value: "$100/mo" },
     { label: "Contract", value: "Month-to-month" },
@@ -31,7 +31,19 @@ export const pricingPage: PageContent = {
     { label: "Contact", to: "/contact" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for SEO & AI SEO Pricing in India — Plans From $100/Month",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "plans",
       heading: "Monthly SEO plans",
       blocks: [
@@ -155,7 +167,7 @@ export const aboutPage: PageContent = {
     "AVR Web Consulting is a digital marketing agency in Visakhapatnam, India serving clients across India, the US, UK, UAE and Europe with hybrid traditional SEO and AI search optimisation.",
   answer:
     "AVR Web Consulting is a digital marketing agency headquartered in Visakhapatnam, India. We combine traditional SEO with AI search optimisation (AEO, GEO, LLMO) so brands rank on Google and get quoted by ChatGPT, Gemini and Perplexity. We serve clients in India, the US, UK, UAE and Europe.",
-  hero: { image: teamMeeting.url, imageAlt: "The AVR Web Consulting team collaborating on client strategy" },
+  hero: { image: "/images/team-meeting-top-down.webp", imageAlt: "About AVR Web Consulting — SEO & AI Search Agency in India illustration" },
   highlights: [
     { label: "Based in", value: "Visakhapatnam" },
     { label: "Markets served", value: "India + Global" },
@@ -174,7 +186,19 @@ export const aboutPage: PageContent = {
     { label: "Contact", to: "/contact" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for About AVR Web Consulting — SEO & AI Search Agency in India",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "story",
       heading: "Why we exist",
       blocks: [
@@ -232,6 +256,15 @@ export const aboutPage: PageContent = {
         },
       ],
     },
+    {
+      id: "follow-us",
+      heading: "Follow Our Journey",
+      blocks: [
+        {
+          kind: "social",
+        },
+      ],
+    },
   ],
   faqs: [
     { question: "Who is AVR Web Consulting?", answer: "AVR Web Consulting is a digital marketing agency based in Visakhapatnam, India, specialising in SEO and AI search optimisation for clients in India, the US, UK, UAE and Europe." },
@@ -261,7 +294,19 @@ export const privacyPage: PageContent = {
     { label: "Privacy Policy", to: "/privacy-policy" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Privacy Policy",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "what-we-collect",
       heading: "Data we collect",
       blocks: [
@@ -331,7 +376,19 @@ export const termsPage: PageContent = {
     { label: "Terms of Service", to: "/terms-of-service" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Terms of Service",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "engagement",
       heading: "Engagement and scope",
       blocks: [
