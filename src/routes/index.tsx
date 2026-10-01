@@ -17,6 +17,7 @@ import {
   homeAnswer,
   homeAiServices,
   homeAutomationServices,
+  homeDevelopmentServices,
   homeDevelopmentTechnologies,
   homeFaqs,
   homeGrowthServices,
@@ -220,6 +221,17 @@ function Home() {
             </li>
           ))}
         </ul>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          {homeDevelopmentServices.map((service) => (
+            <Link key={service.to} to={service.to} className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary">
+              <h3 className="font-display text-lg font-semibold group-hover:text-primary">{service.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-primary">
+                Explore <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
+          ))}
+        </div>
       </Section>
 
       <Section>
@@ -230,10 +242,13 @@ function Home() {
         />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {homeAutomationServices.map((service) => (
-            <article key={service.title} className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="font-display text-lg font-semibold">{service.title}</h3>
+            <Link key={service.title} to={service.to} className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary">
+              <h3 className="font-display text-lg font-semibold group-hover:text-primary">{service.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
-            </article>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-primary">
+                Explore <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
           ))}
         </div>
       </Section>

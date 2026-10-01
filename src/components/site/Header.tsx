@@ -38,20 +38,20 @@ export function Header() {
         </div>
       </div>
 
-      <div className="container-page flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Link to="/" className="flex items-center gap-3" aria-label={`${business.name} home`}>
+      <div className="container-page flex h-16 flex-nowrap items-center justify-between gap-2 px-3 lg:h-20 lg:gap-4 lg:px-8">
+        <Link to="/" className="flex min-w-0 flex-1 items-center gap-2 lg:flex-none lg:gap-3" aria-label={`${business.name} home`}>
           <img
             src={logo.url}
             alt="AVR Web Consulting logo"
             width={44}
             height={44}
-            className="h-10 w-10 rounded-full object-cover ring-2 ring-primary/40 lg:h-11 lg:w-11"
+            className="h-9 w-9 shrink-0 rounded-full object-cover ring-2 ring-primary/40 max-[400px]:h-8 max-[400px]:w-8 lg:h-11 lg:w-11"
           />
-          <span className="leading-tight">
-            <span className="block font-display text-base font-bold tracking-tight lg:text-lg">
+          <span className="min-w-0 leading-tight">
+            <span className="block whitespace-nowrap font-display text-[15px] font-bold leading-[1.15] max-[400px]:text-sm lg:text-lg">
               AVR Web Consulting
             </span>
-            <span className="hidden text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:block">
+            <span className="mt-0.5 block whitespace-nowrap text-[9px] uppercase tracking-[1px] text-muted-foreground max-[400px]:text-[8px] max-[400px]:tracking-[0.8px] lg:text-[11px] lg:tracking-[0.18em]">
               SEO · AI Visibility
             </span>
           </span>
@@ -89,7 +89,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <a
             href={business.phoneHref}
             className="hidden items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors hover:border-primary hover:text-primary md:inline-flex"
@@ -97,13 +97,13 @@ export function Header() {
             <Phone className="h-4 w-4" aria-hidden="true" />
             {business.phone}
           </a>
-          <Button asChild className="rounded-full">
+          <Button asChild className="h-9 shrink-0 whitespace-nowrap rounded-full px-3.5 text-[13px] font-semibold max-[400px]:px-[11px] max-[400px]:text-xs max-[360px]:hidden lg:h-9 lg:px-4 lg:text-sm">
             <Link to="/contact">Free audit</Link>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="rounded-full xl:hidden">
+              <Button variant="outline" size="icon" className="h-[38px] w-[38px] shrink-0 rounded-full xl:hidden">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Open menu</span>
               </Button>

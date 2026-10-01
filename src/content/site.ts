@@ -125,6 +125,32 @@ export const navigation: NavGroup[] = [
         to: "/web-design-development/ecommerce-development",
         blurb: "Stores built to rank and convert",
       },
+      {
+        label: "Full-Stack Web Development",
+        to: "/web-design-development/full-stack-web-development",
+        blurb: "Custom websites and web applications",
+      },
+      {
+        label: "Vibe Coding / AI-Assisted Development",
+        to: "/web-design-development/vibe-coding-ai-assisted-development",
+        blurb: "Faster development with human review",
+      },
+    ],
+  },
+  {
+    label: "AI Agents & Automation",
+    to: "/automation-ai-agents/n8n-automation",
+    children: [
+      {
+        label: "n8n Automations",
+        to: "/automation-ai-agents/n8n-automation",
+        blurb: "Connect tools and automate workflows",
+      },
+      {
+        label: "AI Agent Development",
+        to: "/automation-ai-agents/ai-agent-development",
+        blurb: "Focused assistants for business tasks",
+      },
     ],
   },
   {
@@ -158,6 +184,10 @@ export const footerColumns = [
   {
     title: "Growth",
     links: [...group("Advertising"), ...group("Content"), ...group("Web Design")],
+  },
+  {
+    title: "Automation",
+    links: group("AI Agents & Automation"),
   },
   {
     title: "Company",
