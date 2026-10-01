@@ -24,7 +24,7 @@ export const aiSeoHub: PageContent = {
   serviceName: "AI SEO",
   answer:
     "AI SEO is the practice of making a brand retrievable and quotable inside AI answers. AVR Web Consulting combines answer engine optimisation, generative engine optimisation, LLM SEO, LLMO and structured data engineering so ChatGPT, Gemini, Perplexity, Copilot and Google AI Overviews cite your business.",
-  hero: { image: "/images/llm-seo-services.webp", imageAlt: "AI SEO Services — AEO, GEO, LLM SEO & LLMO | AVR Web Consulting illustration" },
+  hero: { image: aiEngines.url, imageAlt: "Logos of ChatGPT, Gemini, Claude, DeepSeek, Perplexity and Grok" },
   highlights: [
     { label: "Engines tracked", value: "6+" },
     { label: "Baseline audit", value: "7 days" },
@@ -38,19 +38,7 @@ export const aiSeoHub: PageContent = {
     { label: "AI SEO pricing", to: "/pricing/ai-seo-packages" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for AI SEO Services — AEO, GEO, LLM SEO & LLMO",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "shift",
       heading: "Search did not disappear — it changed shape",
       blocks: [
@@ -125,7 +113,7 @@ export const aeo: PageContent = {
   serviceName: "Answer Engine Optimization",
   answer:
     "Answer Engine Optimization structures content so answer engines can extract a direct, accurate response and attribute it to you. AVR Web Consulting rewrites pages answer-first, adds FAQPage and HowTo schema, and tightens factual consistency so your pages become the quoted source.",
-  hero: { image: "/images/aeo-new.webp", imageAlt: "Answer Engine Optimization (AEO) Services | AVR Web Consulting illustration" },
+  hero: { image: aiSearch.url, imageAlt: "AI-powered search bar concept with robotic hand" },
   highlights: [
     { label: "Answer blocks", value: "Every page" },
     { label: "FAQs per page", value: "10" },
@@ -135,19 +123,7 @@ export const aeo: PageContent = {
   breadcrumb: [...base, crumb("Answer Engine Optimization", "/ai-seo/answer-engine-optimization")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for Answer Engine Optimization (AEO) Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "definition",
       heading: "What is Answer Engine Optimization?",
       blocks: [
@@ -195,7 +171,7 @@ export const geoSeo: PageContent = {
   serviceName: "Generative Engine Optimization",
   answer:
     "Generative Engine Optimization improves how often AI-generated answers include and cite your brand. AVR Web Consulting adds the elements generative engines favour — original statistics, named expert quotes, clear comparisons and authoritative sourcing — then measures citation share prompt by prompt.",
-  hero: { image: "/images/geo-generative-engine-optimization.webp", imageAlt: "GEO — Generative Engine Optimization Services | AVR Web Consulting illustration" },
+  hero: { image: aiRetrieval.url, imageAlt: "Illustration of an AI brain processing a structured document" },
   highlights: [
     { label: "Prompt set", value: "100–300" },
     { label: "Engines", value: "ChatGPT · Gemini · Perplexity" },
@@ -205,19 +181,7 @@ export const geoSeo: PageContent = {
   breadcrumb: [...base, crumb("GEO SEO", "/ai-seo/geo-seo")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for GEO — Generative Engine Optimization Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "definition",
       heading: "What is Generative Engine Optimization?",
       blocks: [
@@ -264,7 +228,7 @@ export const llmSeo: PageContent = {
   serviceName: "LLM SEO",
   answer:
     "LLM SEO makes large language models aware of, accurate about, and favourable towards your brand. AVR Web Consulting strengthens your entity footprint, seeds consistent descriptions across sources models trust, and structures site content so it is retrieved during live browsing.",
-  hero: { image: "/images/llm-large-language-models.webp", imageAlt: "LLM SEO Services for ChatGPT, Gemini & Copilot | AVR Web Consulting illustration" },
+  hero: { image: aiEngines.url, imageAlt: "Popular AI assistant logos including ChatGPT, Gemini and Claude" },
   highlights: [
     { label: "Models covered", value: "6+" },
     { label: "Entity sources", value: "40+" },
@@ -274,19 +238,7 @@ export const llmSeo: PageContent = {
   breadcrumb: [...base, crumb("LLM SEO", "/ai-seo/llm-seo")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for LLM SEO Services for ChatGPT, Gemini & Copilot",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "how-llms-learn",
       heading: "How language models learn about your brand",
       blocks: [
@@ -334,7 +286,7 @@ export const llmo: PageContent = {
   serviceName: "Large Language Model Optimization",
   answer:
     "LLMO is the technical side of AI search: structuring content so language models can retrieve, chunk and reuse it accurately. AVR Web Consulting implements semantic HTML, self-contained content chunks, JSON-LD entity graphs, llms.txt files and correct AI crawler permissions.",
-  hero: { image: "/images/what-is-llmo.webp", imageAlt: "LLMO — Large Language Model Optimization | AVR Web Consulting illustration" },
+  hero: { image: aiRetrieval.url, imageAlt: "Structured document being processed by an AI system" },
   highlights: [
     { label: "Focus", value: "Retrieval" },
     { label: "Deliverable", value: "Entity graph" },
@@ -344,19 +296,7 @@ export const llmo: PageContent = {
   breadcrumb: [...base, crumb("LLMO", "/ai-seo/llmo")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for LLMO — Large Language Model Optimization",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "definition",
       heading: "What is LLMO?",
       blocks: [
@@ -403,7 +343,7 @@ export const aiVisibility: PageContent = {
   serviceName: "AI Visibility",
   answer:
     "AI visibility is how often and how favourably AI assistants mention your brand. AVR Web Consulting tracks a fixed prompt set across the major assistants each month, benchmarks your share of answers against competitors, and closes the content and authority gaps behind the difference.",
-  hero: { image: "/images/data-visualization-abstract.webp", imageAlt: "AI Visibility Tracking & Optimisation Services | AVR Web Consulting illustration" },
+  hero: { image: seoConcept.url, imageAlt: "Dashboard concept showing search visibility metrics" },
   highlights: [
     { label: "Prompts tracked", value: "100–300" },
     { label: "Engines", value: "6+" },
@@ -413,19 +353,7 @@ export const aiVisibility: PageContent = {
   breadcrumb: [...base, crumb("AI Visibility", "/ai-seo/ai-visibility")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for AI Visibility Tracking & Optimisation Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "measure",
       heading: "What we measure",
       blocks: [
@@ -472,7 +400,7 @@ export const aiOverviews: PageContent = {
   serviceName: "AI Overviews Optimisation",
   answer:
     "Google AI Overviews are AI-generated summaries shown above traditional results, built from a handful of cited pages. AVR Web Consulting optimises passage structure, schema and topical authority so your URLs become one of those cited sources for your priority queries.",
-  hero: { image: "/images/how-to-optimise-content-llms.webp", imageAlt: "Google AI Overviews Optimisation Services | AVR Web Consulting illustration" },
+  hero: { image: aiSearch.url, imageAlt: "AI-driven search results concept" },
   highlights: [
     { label: "Tracked queries", value: "Your top 100" },
     { label: "Format", value: "Passage-level" },
@@ -482,19 +410,7 @@ export const aiOverviews: PageContent = {
   breadcrumb: [...base, crumb("AI Overviews", "/ai-seo/ai-overviews")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for Google AI Overviews Optimisation Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "how",
       heading: "How AI Overviews choose their sources",
       blocks: [
@@ -542,7 +458,7 @@ export const aiCitations: PageContent = {
   serviceName: "AI Citations and Mentions",
   answer:
     "AI citations are the linked sources an assistant credits in its answer; mentions are unlinked references to your brand. AVR Web Consulting increases both by placing consistent, verifiable brand information on the third-party sources that assistants retrieve from most in your category.",
-  hero: { image: "/images/how-ai-retrieves-and-cites.webp", imageAlt: "AI Citations & Brand Mentions Services | AVR Web Consulting illustration" },
+  hero: { image: laptopWork.url, imageAlt: "Person researching sources and citations on a laptop" },
   highlights: [
     { label: "Placements", value: "Manual only" },
     { label: "Guest posts", value: "From $20" },
@@ -552,19 +468,7 @@ export const aiCitations: PageContent = {
   breadcrumb: [...base, crumb("AI Citations & Mentions", "/ai-seo/ai-citations-mentions")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for AI Citations & Brand Mentions Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "why",
       heading: "Why citations decide AI recommendations",
       blocks: [
@@ -605,7 +509,7 @@ export const aiRetrievalSystems: PageContent = {
   serviceName: "AI Retrieval System Optimisation",
   answer:
     "AI retrieval systems fetch, chunk and embed web content before a model writes an answer. AVR Web Consulting engineers your content for that pipeline with connected JSON-LD entity graphs, chunk-safe structure, clean feeds and validated server-side rendering.",
-  hero: { image: "/images/ai-retrieval-systems-laptop.webp", imageAlt: "AI Retrieval System Optimisation & Data Structuring | AVR illustration" },
+  hero: { image: aiRetrieval.url, imageAlt: "Machine-readable document structure feeding an AI system" },
   highlights: [
     { label: "Entity graph", value: "Connected @id" },
     { label: "Chunk audit", value: "Per template" },
@@ -615,19 +519,7 @@ export const aiRetrievalSystems: PageContent = {
   breadcrumb: [...base, crumb("AI Retrieval Systems", "/ai-seo/ai-retrieval-systems")],
   related: commonRelated,
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for AI Retrieval System Optimisation & Data Structuring",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "pipeline",
       heading: "The retrieval pipeline in plain terms",
       blocks: [

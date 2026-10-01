@@ -5,8 +5,7 @@ export type ContentBlock =
   | { kind: "list"; title?: string; items: string[] }
   | { kind: "steps"; title?: string; items: { title: string; text: string }[] }
   | { kind: "table"; title?: string; head: string[]; rows: string[][] }
-  | { kind: "callout"; title: string; text: string }
-  | { kind: "social" };
+  | { kind: "callout"; title: string; text: string };
 
 export type PageSection = {
   id: string;
@@ -14,25 +13,13 @@ export type PageSection = {
   blocks: ContentBlock[];
 };
 
-export type Author = {
-  name: string;
-  role: string;
-  avatar?: string;
-  bio?: string;
-  social?: {
-    linkedin?: string;
-    x?: string;
-    instagram?: string;
-    facebook?: string;
-  };
-};
-
 export type PageContent = {
   slug: string;
-  title: string;
+  title: string; // <title>
   h1: string;
-  description: string;
+  description: string; // meta description
   eyebrow?: string;
+  /** 40-60 word direct answer for AI/answer engines */
   answer: string;
   hero?: { image?: string; imageAlt?: string };
   highlights?: { label: string; value: string }[];
@@ -41,5 +28,4 @@ export type PageContent = {
   serviceName?: string;
   related?: { label: string; to: string }[];
   breadcrumb: { label: string; to: string }[];
-  author?: Author;
 };

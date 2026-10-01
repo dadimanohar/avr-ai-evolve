@@ -18,7 +18,7 @@ export const fullStackDevelopment: PageContent = {
   serviceName: "Full-Stack Web Development",
   answer:
     "Full-stack web development covers both the interface a user sees and the server, database and integrations behind it. When standard website solutions are not enough, AVR Web Consulting builds custom websites and web applications, selecting the technology stack according to the requirements of each project.",
-  hero: { image: "/images/full-stack-new.webp", imageAlt: "Full-Stack Web Development Services | AVR Web Consulting illustration" },
+  hero: { image: laptopWork.url, imageAlt: "Developer building a custom web application" },
   highlights: [
     { label: "Frontend", value: "React, JS, HTML, CSS" },
     { label: "Backend", value: "Node.js, Python, Java" },
@@ -33,19 +33,7 @@ export const fullStackDevelopment: PageContent = {
     { label: "n8n automation", to: "/automation-ai-agents/n8n-automation" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for Full-Stack Web Development Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "introduction",
       heading: "What full-stack web development means",
       blocks: [
@@ -164,7 +152,7 @@ export const vibeCoding: PageContent = {
   serviceName: "AI-Assisted Web Development",
   answer:
     "Vibe coding is an AI-assisted development approach where developers use AI tools to generate, modify, explore and debug code through natural-language instructions and short iterations. AVR Web Consulting uses these workflows to speed up prototyping and implementation while keeping architecture, review, testing and final decisions with the developer.",
-  hero: { image: "/images/vibe-coding.webp", imageAlt: "Vibe Coding & AI-Assisted Web Development | AVR Web Consulting illustration" },
+  hero: { image: aiSearch.url, imageAlt: "AI-assisted development workflow" },
   highlights: [
     { label: "Best for", value: "Prototypes & iteration" },
     { label: "Review", value: "Human, every change" },
@@ -178,19 +166,7 @@ export const vibeCoding: PageContent = {
     { label: "AI agent development", to: "/automation-ai-agents/ai-agent-development" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for Vibe Coding & AI-Assisted Web Development",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "what-is-vibe-coding",
       heading: "What is vibe coding?",
       blocks: [
@@ -325,7 +301,7 @@ export const n8nAutomation: PageContent = {
   serviceName: "n8n Workflow Automation",
   answer:
     "n8n is a workflow automation platform that connects applications, APIs, databases and services so repetitive processes can run automatically. AVR Web Consulting designs, builds and tests n8n workflows for tasks such as lead handling, notifications, data synchronisation and reporting, with error handling and monitoring built in.",
-  hero: { image: "/images/n8n-workflow-automation.webp", imageAlt: "n8n Automation Services — Workflow Automation | AVR Web Consulting illustration" },
+  hero: { image: teamMeeting.url, imageAlt: "Team reviewing automated business workflows" },
   highlights: [
     { label: "Platform", value: "n8n" },
     { label: "Connects", value: "Apps, APIs, databases" },
@@ -338,19 +314,7 @@ export const n8nAutomation: PageContent = {
     { label: "Full-stack web development", to: "/web-design-development/full-stack-web-development" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for n8n Automation Services — Workflow Automation",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "what-is-n8n",
       heading: "What is n8n?",
       blocks: [
@@ -489,7 +453,7 @@ export const aiAgentDevelopment: PageContent = {
   serviceName: "AI Agent Development",
   answer:
     "An AI agent is a software system that interprets a task, uses the tools or information available to it, makes decisions inside defined boundaries and carries out actions according to its configuration. AVR Web Consulting builds focused agents for defined business processes, with access controls, logging and human oversight where decisions matter.",
-  hero: { image: "/images/ai-agent-concepts-diagram.webp", imageAlt: "AI Agent Development Services | AVR Web Consulting illustration" },
+  hero: { image: aiRetrieval.url, imageAlt: "AI agent connected to business systems" },
   highlights: [
     { label: "Scope", value: "Defined tasks" },
     { label: "Connects to", value: "Tools & workflows" },
@@ -503,19 +467,7 @@ export const aiAgentDevelopment: PageContent = {
     { label: "Full-stack web development", to: "/web-design-development/full-stack-web-development" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for AI Agent Development Services",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "what-is-an-ai-agent",
       heading: "What is an AI agent?",
       blocks: [

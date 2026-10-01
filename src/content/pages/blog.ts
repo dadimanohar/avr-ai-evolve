@@ -19,18 +19,6 @@ export type BlogSeed = {
   answer: string;
   sections: PageSection[];
   faqs: Faq[];
-  author?: {
-    name: string;
-    role: string;
-    avatar?: string;
-    bio?: string;
-    social?: {
-      linkedin?: string;
-      x?: string;
-      instagram?: string;
-      facebook?: string;
-    };
-  };
 };
 
 const s = (id: string, heading: string, ...blocks: PageSection["blocks"]): PageSection => ({
@@ -52,7 +40,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "AI Search",
     date: "2026-01-12",
     readMinutes: 9,
-    image: "/images/ai-generated-brain.webp",
+    image: aiSearch.url,
     description:
       "AI SEO is the practice of making your brand retrievable, quotable and cited by AI assistants like ChatGPT, Gemini, Perplexity and Google AI Overviews. Here is how it differs from traditional SEO and how to start.",
     answer:
@@ -98,7 +86,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "AI Search",
     date: "2026-01-22",
     readMinutes: 7,
-    image: "/images/llm-seo-magnifying-glass.webp",
+    image: aiEngines.url,
     description:
       "Answer Engine Optimization, Generative Engine Optimization and Large Language Model Optimization overlap but solve different problems. Here is a clear breakdown with what to do for each.",
     answer:
@@ -148,7 +136,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "AI Search",
     date: "2026-02-03",
     readMinutes: 8,
-    image: "/images/from-prompts-to-citations.webp",
+    image: aiRetrieval.url,
     description:
       "Google AI Overviews cite a small set of sources per query. This guide covers the page patterns, schema and content structures that get selected, plus how to track your appearance rate.",
     answer:
@@ -189,7 +177,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "AI Search",
     date: "2026-02-14",
     readMinutes: 6,
-    image: "/images/ai-team-holographic-office.webp",
+    image: aiEngines.url,
     description:
       "llms.txt is a proposed standard that gives AI systems a curated map of your most useful content. Here is what to include, what to skip, and how it works alongside robots.txt.",
     answer:
@@ -227,7 +215,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "SEO",
     date: "2026-01-05",
     readMinutes: 11,
-    image: "/images/seo-search-engine.webp",
+    image: laptopWork.url,
     description:
       "A working technical SEO checklist covering crawling, indexation, Core Web Vitals, structured data, JavaScript rendering and AI crawler access — in the order we actually run them.",
     answer:
@@ -280,7 +268,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "Local SEO",
     date: "2026-01-18",
     readMinutes: 10,
-    image: "/images/local-seo-logos.webp",
+    image: seoConcept.url,
     description:
       "How Indian businesses rank in the Google map pack: Business Profile optimisation, citation cleanup, review velocity, location pages and the proximity factors that decide local results.",
     answer:
@@ -325,7 +313,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "SEO",
     date: "2026-02-08",
     readMinutes: 9,
-    image: "/images/seo-growth-chart-laptop.webp",
+    image: laptopWork.url,
     description:
       "Most e-commerce SEO budgets go to blogs that never convert. Here is the category-first framework we use to grow organic revenue, including faceted navigation control and product schema.",
     answer:
@@ -369,7 +357,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "Content",
     date: "2026-02-20",
     readMinutes: 8,
-    image: "/images/website-copywriting-laptop.webp",
+    image: entrepreneur.url,
     description:
       "A repeatable content structure for pages that satisfy searchers, persuade buyers and give AI assistants clean passages to cite.",
     answer:
@@ -415,7 +403,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "Paid Ads",
     date: "2026-01-28",
     readMinutes: 7,
-    image: "/images/google-ads-for-seo.webp",
+    image: seoConcept.url,
     description:
       "Most accounts waste 30-60% of spend on the same seven problems. Here is how to find and fix each one, with the search terms and settings to check first.",
     answer:
@@ -455,7 +443,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "Web Design",
     date: "2026-02-25",
     readMinutes: 8,
-    image: "/images/web-developer-isometric.webp",
+    image: laptopWork.url,
     description:
       "Practical LCP, INP and CLS fixes ranked by impact per hour of work, based on the sites we rebuild — plus how to avoid chasing lab scores that field data ignores.",
     answer:
@@ -501,7 +489,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "SEO",
     date: "2026-03-04",
     readMinutes: 7,
-    image: "/images/programmer-coding-stock.webp",
+    image: aiRetrieval.url,
     description:
       "Not all structured data earns anything. Here are the schema types that still drive rich results or AI comprehension, the ones that no longer do, and how to implement them safely.",
     answer:
@@ -543,7 +531,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "Paid Ads",
     date: "2026-03-11",
     readMinutes: 7,
-    image: "/images/marketing-data-table.webp",
+    image: entrepreneur.url,
     description:
       "A decision framework for allocating budget between SEO and paid search based on your timeline, margins, competitive position and sales cycle — with three worked scenarios.",
     answer:
@@ -582,7 +570,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "SEO",
     date: "2026-03-18",
     readMinutes: 8,
-    image: "/images/marketing-bridge-illustration.webp",
+    image: teamMeeting.url,
     description:
       "Domain structure, hreflang implementation, currency and content localisation for brands expanding from India into the US, UK, UAE and Europe.",
     answer:
@@ -625,7 +613,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "AI Search",
     date: "2026-03-25",
     readMinutes: 7,
-    image: "/images/ai-cpu-circuit-board.webp",
+    image: aiEngines.url,
     description:
       "A practical, tool-agnostic method for measuring how often ChatGPT, Gemini, Perplexity, Claude and AI Overviews mention your brand — and what to do with the data.",
     answer:
@@ -670,7 +658,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "SEO",
     date: "2026-04-02",
     readMinutes: 8,
-    image: "/images/freelancer-laptop.webp",
+    image: entrepreneur.url,
     description:
       "A realistic 90-day plan for small businesses spending around $100 per month on SEO, sequenced so each month funds the next through actual leads.",
     answer:
@@ -717,7 +705,7 @@ export const blogSeeds: BlogSeed[] = [
     category: "Web Design",
     date: "2026-04-10",
     readMinutes: 9,
-    image: "/images/web-development-technology-stack.webp",
+    image: laptopWork.url,
     description:
       "The migration checklist that protects organic traffic through a redesign or replatform: URL inventory, redirect mapping, content parity, staged launch and post-launch monitoring.",
     answer:
@@ -772,12 +760,6 @@ function blogPostPage(seed: BlogSeed): PageContent {
       { label: "SEO services", to: "/seo-services" },
       { label: "Pricing", to: "/pricing" },
     ],
-    author: seed.author || {
-      name: "AVR Web Consulting Team",
-      role: "SEO & AI Visibility Experts",
-      bio: "Our team of senior strategists and technical experts help brands rank on Google and get cited by AI assistants.",
-      social: {}, 
-    },
     sections: seed.sections,
     faqs: seed.faqs,
   };
@@ -802,7 +784,7 @@ export const blogHub: PageContent = {
     "In-depth guides on AI SEO, AEO, GEO, technical SEO, local SEO, content, paid ads and web performance from the AVR Web Consulting team — written for practitioners, not for word counts.",
   answer:
     "The AVR Web Consulting blog publishes practitioner guides on AI SEO, answer engine optimisation, technical SEO, local SEO in India, e-commerce SEO, paid ads efficiency and web performance. Every article opens with a direct answer and includes checklists you can apply the same day.",
-  hero: { image: "/images/laptop-mint.webp", imageAlt: "SEO & AI Search Blog — Playbooks and Guides | AVR Web Consulting illustration" },
+  hero: { image: aiSearch.url, imageAlt: "AI search and SEO knowledge resources" },
   highlights: [
     { label: "Articles", value: `${blogSeeds.length}` },
     { label: "Topics", value: "6" },
@@ -820,19 +802,7 @@ export const blogHub: PageContent = {
     { label: "Contact", to: "/contact" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for SEO & AI Search Blog — Playbooks and Guides",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "index",
       heading: "All articles",
       blocks: [
@@ -850,6 +820,6 @@ export const blogHub: PageContent = {
     { question: "Do you offer a newsletter?", answer: "We send a short monthly digest of new articles and notable search or AI changes. Ask to be added when you contact us." },
     { question: "Are the tactics safe for my site?", answer: "Yes. Everything we publish follows search engine guidelines — we do not document manipulative tactics." },
     { question: "Do you cover markets outside India?", answer: "Yes. Our guides cover US, UK, UAE and European search behaviour alongside Indian markets." },
-    { question: "Can AVR implement what these guides describe?", answer: "Yes. The guides document the exact processes we run for clients from $100/month. Request an audit to start." },
+    { question: "Can AVR implement what these guides describe?", answer: "Yes. The guides document the exact processes we run for clients from $100/month. Request a free audit to start." },
   ],
 };

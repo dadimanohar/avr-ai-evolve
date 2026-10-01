@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import type { ContentBlock, Faq, PageSection } from "@/content/types";
 import { business } from "@/content/site";
 import { Button } from "@/components/ui/button";
-import { SocialLinks } from "@/components/site/SocialLinks";
 import {
   Accordion,
   AccordionContent,
@@ -196,13 +195,6 @@ export function Blocks({ blocks }: { blocks: ContentBlock[] }) {
             </div>
           );
 
-        if (block.kind === "social")
-          return (
-            <div key={i} className="mt-4">
-              <SocialLinks variant="dark" />
-            </div>
-          );
-
         return (
           <div key={i} className="rounded-xl border-l-4 border-amber bg-amber/10 p-5">
             <p className="font-display font-semibold">{block.title}</p>
@@ -274,15 +266,11 @@ export function FaqAccordion({ faqs, heading }: { faqs: Faq[]; heading?: string 
 }
 
 export function CTABand({
-  title = "Get an AI visibility & SEO audit",
+  title = "Get a free AI visibility & SEO audit",
   text = "Tell us your target keywords and markets. We reply within one business day with findings, priorities and a fixed monthly price.",
-  ctaText = "Book consultation",
-  showWhatsapp = false,
 }: {
   title?: string;
   text?: string;
-  ctaText?: string;
-  showWhatsapp?: boolean;
 }) {
   return (
     <Section tone="ink">
@@ -294,26 +282,10 @@ export function CTABand({
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg" className="rounded-full">
             <Link to="/contact">
-              {ctaText}
+              Book free consultation
               <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>
-          {showWhatsapp && (
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="rounded-full border-ink-foreground/30 bg-transparent text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground"
-            >
-              <a
-                href={`${business.whatsapp}?text=Hello%20AVR%20Web%20Consulting,%20I%20would%20like%20to%20discuss%20your%20services.`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp
-              </a>
-            </Button>
-          )}
           <Button
             asChild
             size="lg"
