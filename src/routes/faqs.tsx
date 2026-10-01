@@ -55,15 +55,25 @@ function FaqHub() {
     <>
       <Section className="pb-6 pt-10 lg:pt-14">
         <Breadcrumbs trail={breadcrumb} />
-        <p className="mb-3 mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-          Answer hub
-        </p>
-        <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] lg:text-5xl">
-          {allFaqs.length}+ answers on SEO, AI search and digital marketing
-        </h1>
-        <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{description}</p>
-        <div className="mt-8 max-w-3xl">
-          <AnswerBlock text={answer} />
+        <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              Answer hub
+            </p>
+            <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] lg:text-5xl">
+              {allFaqs.length}+ answers on SEO, AI search and digital marketing
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{description}</p>
+            <div className="mt-8 max-w-3xl">
+              <AnswerBlock text={answer} />
+            </div>
+          </div>
+          <img
+            src="/images/online-learning-video-call.webp"
+            alt="Searchable SEO & AI SEO FAQs"
+            loading="eager"
+            className="w-full rounded-3xl border border-border object-cover shadow-sm"
+          />
         </div>
         <div className="mt-10">
           <StatBand

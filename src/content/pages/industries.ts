@@ -506,7 +506,7 @@ function industryFaqs(s: IndustrySeed): Faq[] {
     },
     {
       question: `What does ${s.name.toLowerCase()} SEO cost at AVR Web Consulting?`,
-      answer: `Programmes start at $100/month for focused local or single-service work and scale with content volume, number of locations and competition. We quote after a free audit so the scope matches the opportunity, not a template.`,
+      answer: `Programmes start at $100/month for focused local or single-service work and scale with content volume, number of locations and competition. We quote after an initial audit so the scope matches the opportunity, not a template.`,
     },
     {
       question: `Which keywords matter most for ${s.name.toLowerCase()}?`,
@@ -570,7 +570,19 @@ function industryPage(s: IndustrySeed, index: number): PageContent {
       { label: "Pricing", to: "/pricing" },
     ],
     sections: [
-      {
+      
+    {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Own the comparison layer",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
         id: "search-behaviour",
         heading: `How ${s.name.toLowerCase()} buyers actually search in 2026`,
         blocks: [
@@ -655,7 +667,7 @@ export const industriesHub: PageContent = {
   serviceName: "Industry SEO Services",
   answer:
     "AVR Web Consulting serves ten core industries — startups, e-commerce, healthcare, fashion and retail, SaaS and tech, real estate, education, travel, legal and manufacturing. Each programme is built around that sector's buyer intent, decision cycle, compliance constraints and the structured data AI engines need to cite you.",
-  hero: { image: teamMeeting.url, imageAlt: "Consulting team planning an industry SEO programme" },
+  hero: { image: "/images/industries-handshake.webp", imageAlt: "Industries We Serve — SEO & AI Visibility by Sector | AVR Web Consulting illustration" },
   highlights: [
     { label: "Industries served", value: "10+" },
     { label: "Markets", value: "India + global" },
@@ -668,7 +680,19 @@ export const industriesHub: PageContent = {
   ],
   related: industrySeeds.map((s) => ({ label: s.name, to: `/industries/${s.slug}` })),
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Industries We Serve — SEO & AI Visibility by Sector",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "why-sector",
       heading: "Why sector-specific SEO beats a generic retainer",
       blocks: [
@@ -723,7 +747,7 @@ export const industriesHub: PageContent = {
     {
       question: "What if my industry is not listed?",
       answer:
-        "We still work with you. The listed sectors are where we have the deepest playbooks, but our audit-first process adapts to any business with search or AI-assistant demand. Contact us for a free assessment.",
+        "We still work with you. The listed sectors are where we have the deepest playbooks, but our audit-first process adapts to any business with search or AI-assistant demand. Contact us for an assessment.",
     },
     {
       question: "Does industry experience actually matter in SEO?",
@@ -748,7 +772,7 @@ export const industriesHub: PageContent = {
     {
       question: "What does an industry programme cost?",
       answer:
-        "From $100/month for a focused local or single-service scope, scaling with content volume, locations and competitiveness. Every quote follows a free audit so the scope matches the opportunity.",
+        "From $100/month for a focused local or single-service scope, scaling with content volume, locations and competitiveness. Every quote follows an initial audit so the scope matches the opportunity.",
     },
     {
       question: "How quickly do industry programmes show results?",

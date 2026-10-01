@@ -6,6 +6,8 @@ import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { business } from "@/content/site";
 
+import { useEffect, useState } from "react";
+
 export function VideoHero({
   eyebrow,
   title,
@@ -17,17 +19,25 @@ export function VideoHero({
   subtitle: string;
   secondary?: string;
 }) {
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+
+  useEffect(() => {
+    // Defer video loading slightly to prioritize critical page rendering and LCP
+    const timer = setTimeout(() => setShouldLoadVideo(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative isolate min-h-[38rem] overflow-hidden bg-ink text-ink-foreground lg:min-h-[44rem]">
       <video
         className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-        src={heroVideo.url}
+        src={shouldLoadVideo ? heroVideo.url : undefined}
         poster={heroPoster.url}
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
+        preload={shouldLoadVideo ? "auto" : "none"}
         aria-hidden="true"
         tabIndex={-1}
       />
@@ -35,6 +45,7 @@ export function VideoHero({
         src={heroPoster.url}
         alt=""
         aria-hidden="true"
+        fetchPriority="high"
         className="absolute inset-0 hidden h-full w-full object-cover motion-reduce:block"
       />
       <div
@@ -61,9 +72,23 @@ export function VideoHero({
         <div className="mt-10 flex flex-wrap gap-3">
           <Button asChild size="lg" className="rounded-full">
             <Link to="/contact">
-              Get a free digital audit
+              Request a digital audit
               <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="rounded-full border-ink-foreground/30 bg-transparent text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground"
+          >
+            <a
+              href={`${business.whatsapp}?text=Hello%20AVR%20Web%20Consulting,%20I%20would%20like%20to%20discuss%20your%20services.`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
           </Button>
           <Button
             asChild

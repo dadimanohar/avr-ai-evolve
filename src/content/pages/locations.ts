@@ -254,7 +254,7 @@ function locationFaqs(s: LocationSeed): Faq[] {
     },
     {
       question: `How much does SEO cost ${where}?`,
-      answer: `Plans start at $100/month for focused local scopes and scale with competition, content volume and the number of locations targeted. Pricing is quoted in ${s.currency} after a free audit — no long lock-in contracts.`,
+      answer: `Plans start at $100/month for focused local scopes and scale with competition, content volume and the number of locations targeted. Pricing is quoted in ${s.currency} after an audit — no long lock-in contracts.`,
     },
     {
       question: `How competitive is search ${where}?`,
@@ -288,8 +288,8 @@ function locationFaqs(s: LocationSeed): Faq[] {
       answer: `All links, citations and content are produced manually by people. We use no PBNs, no automated link tools and no spun content, which is why clients ${where} have never had a manual action under our management.`,
     },
     {
-      question: `How do we get started ${where}?`,
-      answer: `Request a free audit. We review your site, competitors and AI visibility ${where}, then send a prioritised roadmap with timelines and pricing. Call ${business.phone} or email ${business.email}.`,
+      question: `How do I start a campaign for my business?`,
+      answer: `Request an audit. We review your site, competitors and AI visibility ${where}, then send a prioritised roadmap with timelines and pricing. Call ${business.phone} or email ${business.email}.`,
     },
   ];
 }
@@ -326,7 +326,19 @@ function locationPage(s: LocationSeed, index: number): PageContent {
       { label: "Pricing", to: "/pricing" },
     ],
     sections: [
-      {
+      
+    {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Sectors we serve here",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
         id: "market",
         heading: `The search market in ${label}`,
         blocks: [
@@ -424,7 +436,7 @@ export const locationsHub: PageContent = {
   serviceName: "SEO Services by Location",
   answer:
     "AVR Web Consulting is headquartered in Visakhapatnam, India and serves clients across eight Indian metros plus the United States, United Kingdom, United Arab Emirates and Europe. Each market gets locality-specific content, LocalBusiness schema with geo-coordinates and AI visibility tracking tuned to local query patterns.",
-  hero: { image: entrepreneur.url, imageAlt: "Consultant reviewing global SEO performance" },
+  hero: { image: "/images/locations-map-new.webp", imageAlt: "Locations We Serve — SEO Company in India, USA, UK, UAE & Europe | AVR illustration" },
   highlights: [
     { label: "Head office", value: "Visakhapatnam" },
     { label: "Indian metros", value: "8" },
@@ -440,7 +452,19 @@ export const locationsHub: PageContent = {
     to: `/locations/${s.slug}`,
   })),
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Locations We Serve — SEO Company in India, USA, UK, UAE & Europe",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "india",
       heading: "SEO services across Indian metros",
       blocks: [
@@ -484,7 +508,8 @@ export const locationsHub: PageContent = {
           kind: "steps",
           title: "Working with us from anywhere",
           items: [
-            { title: "Free audit", text: "We assess your site, competitors and AI visibility in your market within 3 working days." },
+            { title: "Discovery call", text: "We discuss your market, existing traffic, main services and goals." },
+            { title: "Initial audit", text: "We assess your site, competitors and AI visibility in your market within 3 working days." },
             { title: "Roadmap call", text: "A scheduled video call in your time zone to agree scope, timelines and pricing." },
             { title: "Execution sprints", text: "Monthly sprints with a shared task board so you always see what is in progress." },
             { title: "Reporting", text: "Live dashboard plus a written monthly review covering rankings, AI mentions and enquiries." },
@@ -539,9 +564,9 @@ export const locationsHub: PageContent = {
         "Yes. Local AEO includes LocalBusiness schema with geo-coordinates, consistent NAP everywhere, and answer-first locality content so AI assistants recommend you for 'near me' style prompts.",
     },
     {
-      question: "How do I get a quote for my location?",
+      question: "How do we get started?",
       answer:
-        "Request a free audit through the contact page. You will receive a market-specific roadmap, timeline and price quoted in your currency within three working days.",
+        "Request an audit through the contact page. You will receive a market-specific roadmap, timeline and price quoted in your currency within three working days.",
     },
   ],
 };

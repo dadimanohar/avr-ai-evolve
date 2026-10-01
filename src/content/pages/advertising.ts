@@ -18,7 +18,7 @@ export const paidAdvertisingHub: PageContent = {
   answer:
     "AVR Web Consulting manages Google Ads, Meta Ads, LinkedIn Ads and YouTube campaigns with a conversion-first structure: tight query control, landing pages built to convert and full offline-conversion tracking. Paid runs alongside SEO so keyword and message data from ads informs the organic roadmap.",
   hero: {
-    image: laptopWork.url,
+    image: "/images/megaphone-laptop-announcement.webp",
     imageAlt: "Marketer reviewing paid advertising performance on a laptop",
   },
   highlights: [
@@ -34,7 +34,19 @@ export const paidAdvertisingHub: PageContent = {
     { label: "SEO services", to: "/seo-services" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Paid Advertising Agency — Google Ads & Social Ads",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "channels",
       heading: "Channels we manage",
       blocks: [
@@ -129,7 +141,7 @@ export const googleAds: PageContent = {
   serviceName: "Google Ads Management",
   answer:
     "AVR Web Consulting builds and manages Google Ads accounts across Search, Shopping, Performance Max, Display and YouTube. We start with accurate conversion tracking, structure campaigns by intent and margin, review search terms weekly and optimise toward cost per qualified lead rather than clicks or impression share.",
-  hero: { image: entrepreneur.url, imageAlt: "Business owner reviewing Google Ads results in an office" },
+  hero: { image: "/images/google-ads-vs-seo-comparison.webp", imageAlt: "Google Ads Management — Search, Shopping & PMax | AVR Web Consulting illustration" },
   highlights: [
     { label: "Campaign types", value: "5" },
     { label: "Search-term reviews", value: "Weekly" },
@@ -143,7 +155,19 @@ export const googleAds: PageContent = {
     { label: "Pricing", to: "/pricing" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Google Ads Management — Search, Shopping & PMax",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "campaign-types",
       heading: "Campaign types and when each one earns its budget",
       blocks: [
@@ -229,7 +253,7 @@ export const socialMediaAds: PageContent = {
   serviceName: "Social Media Advertising",
   answer:
     "AVR Web Consulting runs paid social on Meta, Instagram, LinkedIn and YouTube. We build audience and creative testing frameworks, deploy server-side tracking through Conversions API, and judge campaigns on cost per qualified lead or blended ROAS instead of platform-reported vanity metrics.",
-  hero: { image: teamMeeting.url, imageAlt: "Team planning a social media advertising campaign" },
+  hero: { image: "/images/digital-marketing-benefits.webp", imageAlt: "Social Media Ads — Meta, LinkedIn & YouTube | AVR Web Consulting illustration" },
   highlights: [
     { label: "Creative variants / month", value: "12+" },
     { label: "Platforms", value: "4" },
@@ -243,7 +267,19 @@ export const socialMediaAds: PageContent = {
     { label: "Content marketing", to: "/content-marketing" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Social Media Ads — Meta, LinkedIn & YouTube",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "creative-engine",
       heading: "Creative is the targeting now",
       blocks: [
@@ -321,7 +357,7 @@ export const socialMediaMarketing: PageContent = {
   serviceName: "Social Media Marketing",
   answer:
     "AVR Web Consulting manages organic social media across Instagram, Facebook, LinkedIn, YouTube and X: monthly content calendars, short-form video, graphics, captions with keyword intent, community replies and monthly analytics. Organic social builds the branded demand and third-party mentions that both search engines and AI assistants reward.",
-  hero: { image: laptopWork.url, imageAlt: "Content calendar and social media planning on a laptop" },
+  hero: { image: "/images/marketing-woman.webp", imageAlt: "Social Media Marketing Services | AVR Web Consulting illustration" },
   highlights: [
     { label: "Posts / month", value: "16–24" },
     { label: "Reels / month", value: "8" },
@@ -335,7 +371,19 @@ export const socialMediaMarketing: PageContent = {
     { label: "AI visibility", to: "/ai-seo/ai-visibility" },
   ],
   sections: [
+    
     {
+      id: "key-takeaways",
+      heading: "Key Takeaways",
+      blocks: [
+        { kind: "list", items: [
+          "Expert strategies tailored for Social Media Marketing Services",
+          "Data-driven approach without relying on guesswork",
+          "Focus on sustainable, long-term search visibility",
+          "Fully aligned with modern Answer Engine and AI search requirements"
+        ]}
+      ]
+    }, {
       id: "deliverables",
       heading: "What a monthly retainer includes",
       blocks: [
