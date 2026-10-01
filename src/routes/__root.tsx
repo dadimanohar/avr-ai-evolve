@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -130,8 +130,6 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-import { FloatingContact } from "@/components/site/FloatingContact";
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -144,7 +142,6 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
-        <FloatingContact />
       </div>
     </QueryClientProvider>
   );

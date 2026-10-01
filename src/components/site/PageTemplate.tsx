@@ -11,7 +11,6 @@ import {
   TableOfContents,
 } from "@/components/site/sections";
 import { buildHead, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/seo";
-import { SocialLinks } from "@/components/site/SocialLinks";
 
 export function pageHead(page: PageContent) {
   return buildHead({
@@ -71,29 +70,6 @@ export function PageTemplate({ page }: { page: PageContent }) {
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
           <div>
             <ContentSections sections={page.sections} />
-            
-            {page.author && (
-              <div className="mt-14 rounded-2xl border border-border bg-card p-6 sm:p-8">
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                  {page.author.avatar && (
-                    <img 
-                      src={page.author.avatar} 
-                      alt={page.author.name} 
-                      className="h-16 w-16 shrink-0 rounded-full object-cover" 
-                    />
-                  )}
-                  <div className="flex-1">
-                    <h3 className="font-display text-lg font-bold">{page.author.name}</h3>
-                    <p className="text-sm font-medium text-primary">{page.author.role}</p>
-                    {page.author.bio && <p className="mt-2 text-sm text-muted-foreground">{page.author.bio}</p>}
-                    <div className="mt-4">
-                      <SocialLinks variant="dark" size="small" urls={page.author.social} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
             <div className="mt-14">
               <FaqAccordion faqs={page.faqs} />
             </div>

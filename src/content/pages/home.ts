@@ -137,6 +137,19 @@ export const homeDevelopmentTechnologies = [
   "AI-Assisted Development",
 ];
 
+export const homeDevelopmentServices = [
+  {
+    title: "Full-Stack Web Development",
+    text: "Custom websites and web applications built across frontend, backend, databases, and integrations.",
+    to: "/web-design-development/full-stack-web-development",
+  },
+  {
+    title: "Vibe Coding / AI-Assisted Development",
+    text: "Faster prototyping and implementation with developer review, testing, and engineering oversight.",
+    to: "/web-design-development/vibe-coding-ai-assisted-development",
+  },
+];
+
 export const homeAutomationServices = [
   {
     title: "n8n Automations",

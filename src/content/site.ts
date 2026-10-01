@@ -21,12 +21,6 @@ export const business = {
   geo: { lat: 17.7231, lng: 83.3012 },
   hours: "Mon–Sat 09:30–19:00 IST",
   priceRange: "$$",
-  social: {
-    linkedin: "https://www.linkedin.com/company/avr-webconsulting/",
-    x: "https://x.com/avrwebconsult",
-    instagram: "https://www.instagram.com/avrwebconsulting/",
-    facebook: "https://www.facebook.com/avrwebconsulting",
-  },
 } as const;
 
 export const fullAddress = `${business.address.street}, ${business.address.city} – ${business.address.postalCode}, ${business.address.region}, ${business.address.countryName}`;
@@ -134,28 +128,28 @@ export const navigation: NavGroup[] = [
       {
         label: "Full-Stack Web Development",
         to: "/web-design-development/full-stack-web-development",
-        blurb: "Custom sites & web applications",
+        blurb: "Custom websites and web applications",
       },
       {
         label: "Vibe Coding / AI-Assisted Development",
         to: "/web-design-development/vibe-coding-ai-assisted-development",
-        blurb: "Faster builds with AI workflows",
+        blurb: "Faster development with human review",
       },
     ],
   },
   {
-    label: "Automation",
+    label: "AI Agents & Automation",
     to: "/automation-ai-agents/n8n-automation",
     children: [
       {
-        label: "n8n Automation",
+        label: "n8n Automations",
         to: "/automation-ai-agents/n8n-automation",
-        blurb: "Connect tools & automate workflows",
+        blurb: "Connect tools and automate workflows",
       },
       {
         label: "AI Agent Development",
         to: "/automation-ai-agents/ai-agent-development",
-        blurb: "Intelligent business assistants",
+        blurb: "Focused assistants for business tasks",
       },
     ],
   },
@@ -193,7 +187,7 @@ export const footerColumns = [
   },
   {
     title: "Automation",
-    links: group("Automation"),
+    links: group("AI Agents & Automation"),
   },
   {
     title: "Company",

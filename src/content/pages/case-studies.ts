@@ -20,7 +20,6 @@ export type CaseStudySeed = {
   resultRows: string[][];
   timeline: string;
   quote: { text: string; author: string };
-  takeaways: string[];
 };
 
 export const caseStudySeeds: CaseStudySeed[] = [
@@ -30,7 +29,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "E-commerce",
     location: "Mumbai, India",
     service: "Technical SEO + content + AI SEO",
-    image: "/images/google-ads-for-seo.webp",
+    image: laptopWork.url,
     summary:
       "A 2,400-SKU home décor store grew organic revenue 212% in nine months after we fixed crawl waste, rebuilt category content and made product data machine-readable for AI shopping answers.",
     challenge: [
@@ -63,12 +62,6 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "We had spent two years buying traffic. AVR made the catalogue itself the traffic source, and now AI shopping assistants recommend us by name.",
       author: "Head of Growth, D2C home & living brand",
     },
-    takeaways: [
-      "Crawl waste is an invisible ceiling — resolving facet bloat before investing in new content is the highest-ROI move for large catalogues",
-      "Category pages written as genuine buying guides outperform thin product-list pages even against well-funded marketplaces",
-      "Product schema that publishes price, stock and ratings in machine-readable form is the entry ticket for AI shopping answer inclusion",
-      "Sustained authority building through relevant editorial links compounds alongside content work to produce gains that paid spend alone cannot replicate",
-    ],
   },
   {
     slug: "saas-ai-visibility-turnaround",
@@ -76,7 +69,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "SaaS",
     location: "Bengaluru, India / US market",
     service: "AI SEO (AEO, GEO, LLMO)",
-    image: "/images/ai-cpu-board-contact.webp",
+    image: aiSearch.url,
     summary:
       "A B2B SaaS platform went from zero AI assistant mentions to being cited in 61% of tracked buying prompts in six months, lifting assisted pipeline by 38%.",
     challenge: [
@@ -109,12 +102,6 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Buyers started arriving already convinced, because the AI they asked had quoted our benchmark study.",
       author: "VP Marketing, B2B workflow SaaS",
     },
-    takeaways: [
-      "Gated content and logins are invisible to AI crawlers — making documentation and pricing publicly accessible is a prerequisite, not an optional improvement",
-      "Entity consistency across Crunchbase, LinkedIn and Wikidata shapes how AI models resolve a brand and is far cheaper to fix than to ignore",
-      "Original benchmark studies with downloadable methodology become the most-cited assets in a programme, multiplying mentions across sources models trust",
-      "Monitoring specific buyer prompts monthly — not generic rankings — is the only reliable way to measure and improve AI assistant visibility",
-    ],
   },
   {
     slug: "multi-location-clinic-local-seo",
@@ -122,7 +109,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Healthcare",
     location: "Hyderabad & Visakhapatnam, India",
     service: "Local SEO + GMB",
-    image: "/images/neural-network-lightbulb.webp",
+    image: teamMeeting.url,
     summary:
       "Six clinic locations moved into the map pack for their core treatments, tripling appointment calls from Google in five months with zero paid spend.",
     challenge: [
@@ -155,12 +142,6 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Our front desk noticed before the report did — the phone simply did not stop.",
       author: "Operations Director, multi-speciality clinic group",
     },
-    takeaways: [
-      "Duplicate and unclaimed Google Business Profiles actively suppress rankings — claiming and cleaning up all profiles before new work is non-negotiable in multi-location healthcare",
-      "A page per service per location, each with specific doctor bios, pricing guidance and FAQs, dramatically outperforms a single 'Services' page covering everything",
-      "Systematic review generation through compliant post-visit sequences can take a group from single-digit reviews to hundreds within months, shifting both map rankings and patient trust",
-      "Local citation accuracy across healthcare aggregators and Indian directories is the foundation — inconsistent NAP is the most common and most damaging omission in clinic SEO",
-    ],
   },
   {
     slug: "us-law-firm-national-seo",
@@ -168,7 +149,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Legal services",
     location: "United States",
     service: "National SEO + content",
-    image: "/images/gmb-citation-map.webp",
+    image: entrepreneur.url,
     summary:
       "A US immigration law firm reached page one for 87 high-intent visa terms and cut cost per qualified consultation by 61% versus their previous paid-only model.",
     challenge: [
@@ -201,12 +182,6 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "We stopped renting attention from Google Ads and started owning it.",
       author: "Managing Partner, US immigration law firm",
     },
-    takeaways: [
-      "Topic clusters built around visa categories, each with procedural sub-articles, create far more durable authority than standalone practice-area pages",
-      "E-E-A-T is not optional in legal search — attorney credentials, bar admissions and reviewed-by lines are the signals Google and AI engines require before citing legal content",
-      "Answer-first articles with extractable 45-word summaries are the format that wins both featured snippets and AI Overview citations simultaneously",
-      "Replacing a generic contact form with intake flows specific to each case type can lift form completion by over 30%, compounding the value of every organic session",
-    ],
   },
   {
     slug: "uae-real-estate-lead-generation",
@@ -214,7 +189,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Real estate",
     location: "Dubai, UAE",
     service: "SEO + Google Ads",
-    image: "/images/lead-generation-phone-laptop.webp",
+    image: seoConcept.url,
     summary:
       "A Dubai brokerage combined community-level SEO with tightly matched Google Ads to cut cost per qualified lead by 47% while doubling organic enquiries.",
     challenge: [
@@ -247,12 +222,6 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Same budget, twice the meetings — and the meetings are with real buyers.",
       author: "Sales Director, Dubai property brokerage",
     },
-    takeaways: [
-      "Combining community-level organic content with tightly restructured paid campaigns produces synergistic effects neither channel achieves independently in competitive real estate markets",
-      "Arabic-language pages targeting locally-worded queries — not machine-translated versions of English content — drove a 320% increase in organic Arabic sessions because the query patterns differ materially",
-      "Feeding CRM-qualified lead data back into Google Ads bidding is the single fastest way to shift a campaign from optimising for clicks to optimising for actual sales conversations",
-      "RealEstateListing and Place schema make property inventory legible to both Google rich results and AI property research tools, opening a second visibility channel beyond portal listings",
-    ],
   },
   {
     slug: "uk-manufacturer-b2b-seo",
@@ -260,7 +229,7 @@ export const caseStudySeeds: CaseStudySeed[] = [
     industry: "Manufacturing",
     location: "United Kingdom",
     service: "Technical SEO + web rebuild",
-    image: "/images/local-citation-directory-listing.webp",
+    image: aiRetrieval.url,
     summary:
       "A UK manufacturer replaced a 900-page legacy site with a fast, structured catalogue and grew RFQ submissions 176% without losing a single legacy ranking.",
     challenge: [
@@ -293,12 +262,6 @@ export const caseStudySeeds: CaseStudySeed[] = [
       text: "Engineers can finally find our tolerances without downloading a PDF — and so can Google.",
       author: "Marketing Manager, UK industrial manufacturer",
     },
-    takeaways: [
-      "A full 1:1 redirect map for every existing URL, staged launch and six weeks of daily post-launch monitoring are what allowed a 900-page migration to retain 100% of legacy rankings",
-      "Converting product specifications from locked PDFs into structured HTML tables with Product schema simultaneously opened the site to search indexing and to AI sourcing tools",
-      "Core Web Vitals improvements — LCP from 6.1s to 1.4s — matter more in B2B manufacturing than many assume, because procurement teams use slow networks on trade-show floors and factory floors",
-      "Organising content by application and problem rather than by product code is how engineer-led searches get captured before a competitor's catalogue does",
-    ],
   },
 ];
 
@@ -325,19 +288,7 @@ function caseStudyPage(seed: CaseStudySeed): PageContent {
       { label: "AI SEO", to: "/ai-seo" },
     ],
     sections: [
-      
-    {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for Crawl control",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
+      {
         id: "snapshot",
         heading: "Client snapshot",
         blocks: [
@@ -387,7 +338,12 @@ function caseStudyPage(seed: CaseStudySeed): PageContent {
         blocks: [
           {
             kind: "list",
-            items: seed.takeaways,
+            items: [
+              "Fix retrieval and structure before adding volume — content on a broken foundation compounds nothing",
+              "Answer-first formatting is what makes a page quotable by both featured snippets and AI assistants",
+              "Attribution matters: measuring qualified outcomes, not raw traffic, is what changed the budget decisions",
+              "Compounding beats spikes — every month of manual work here raised the floor, not just the peak",
+            ],
           },
         ],
       },
@@ -402,7 +358,7 @@ function caseStudyPage(seed: CaseStudySeed): PageContent {
       { question: "How were AI citations measured?", answer: "We ran a fixed monthly prompt set across ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews, recording whether the brand was named or linked." },
       { question: "Did rankings hold after the engagement?", answer: "Yes. Because the work is manual and policy-compliant, gains have held through subsequent core updates rather than reversing." },
       { question: "Do you share the client's name?", answer: "Only with written permission. Several clients prefer anonymity, so we describe the business type, market and verified metrics instead." },
-      { question: "How do I get an audit for my own site?", answer: "Request an audit from the contact page. You will receive findings, priorities and a fixed monthly quote within one business day." },
+      { question: "How do I get an audit for my own site?", answer: "Request a free audit from the contact page. You will receive findings, priorities and a fixed monthly quote within one business day." },
     ],
   };
 }
@@ -422,7 +378,7 @@ export const caseStudiesHub: PageContent = {
     "Six documented AVR Web Consulting engagements across e-commerce, SaaS, healthcare, legal, real estate and manufacturing — with before-and-after metrics for traffic, leads, revenue and AI citations.",
   answer:
     "AVR Web Consulting case studies document real client outcomes: 212% organic revenue growth for a D2C store, 61% AI prompt citation rate for a B2B SaaS, 218% more calls for a clinic group, and 47% lower cost per lead for a Dubai brokerage. Every metric is measured before and after.",
-  hero: { image: "/images/team-collaboration-tablet.webp", imageAlt: "SEO & AI SEO Case Studies — Real Client Results | AVR Web Consulting illustration" },
+  hero: { image: teamMeeting.url, imageAlt: "AVR Web Consulting team reviewing client performance data" },
   highlights: [
     { label: "Documented projects", value: "6" },
     { label: "Industries covered", value: "6" },
@@ -441,19 +397,7 @@ export const caseStudiesHub: PageContent = {
     { label: "AI SEO", to: "/ai-seo" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for SEO & AI SEO Case Studies — Real Client Results",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "overview",
       heading: "Results at a glance",
       blocks: [
@@ -507,6 +451,6 @@ export const caseStudiesHub: PageContent = {
     { question: "Can you guarantee the same results for me?", answer: "No agency can guarantee specific rankings or revenue. We guarantee the method, the deliverables and transparent reporting against baselines we agree upfront." },
     { question: "Do you work with small budgets?", answer: "Yes. Our Starter plan is $100/month and is designed for single-location businesses who need local visibility rather than national campaigns." },
     { question: "Will you show my business as a case study?", answer: "Only with your written permission, and we can anonymise the brand while keeping verified metrics." },
-    { question: "How do I start a project like these?", answer: "Request an audit on the contact page. We benchmark your site against competitors and send priorities plus a fixed monthly price within one business day." },
+    { question: "How do I start a project like these?", answer: "Request a free audit on the contact page. We benchmark your site against competitors and send priorities plus a fixed monthly price within one business day." },
   ],
 };

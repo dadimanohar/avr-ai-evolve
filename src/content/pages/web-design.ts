@@ -16,7 +16,7 @@ export const webDesignHub: PageContent = {
   serviceName: "Web Design and Development",
   answer:
     "AVR Web Consulting designs and builds business websites, WordPress sites and online stores with SEO built in from the first wireframe: semantic HTML, clean URL architecture, schema markup, green Core Web Vitals and answer-first page structure so both search crawlers and AI retrieval systems can parse every page.",
-  hero: { image: "/images/web-development-touch-screen.webp", imageAlt: "Web Design & Development — SEO-Ready Websites | AVR Web Consulting illustration" },
+  hero: { image: laptopWork.url, imageAlt: "Web designer working on a responsive website layout" },
   highlights: [
     { label: "Projects from", value: "$400" },
     { label: "Typical build", value: "3–5 weeks" },
@@ -30,19 +30,7 @@ export const webDesignHub: PageContent = {
     { label: "Technical SEO", to: "/seo-services/technical-seo" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for Web Design & Development — SEO-Ready Websites",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "approach",
       heading: "SEO is an architecture decision, not a plugin",
       blocks: [
@@ -128,7 +116,7 @@ export const wordpressDevelopment: PageContent = {
   serviceName: "WordPress Development",
   answer:
     "AVR Web Consulting builds custom WordPress sites with a lean plugin stack, block-based editing, schema markup and green Core Web Vitals. We avoid bloated multipurpose themes and page-builder overload, so the site stays fast and secure long after your team starts publishing to it.",
-  hero: { image: "/images/wordpress-development-course.webp", imageAlt: "WordPress Development Services — Fast & SEO-Ready | AVR Web Consulting illustration" },
+  hero: { image: entrepreneur.url, imageAlt: "Developer configuring a WordPress website" },
   highlights: [
     { label: "Build time", value: "3–4 weeks" },
     { label: "Plugins used", value: "Under 12" },
@@ -142,19 +130,7 @@ export const wordpressDevelopment: PageContent = {
     { label: "Blogging & copywriting", to: "/content-marketing/blogging-copywriting" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for WordPress Development Services — Fast & SEO-Ready",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "services",
       heading: "What we do with WordPress",
       blocks: [
@@ -234,7 +210,7 @@ export const ecommerceDevelopment: PageContent = {
   serviceName: "E-commerce Development",
   answer:
     "AVR Web Consulting builds Shopify and WooCommerce stores with SEO-first architecture: crawlable faceted navigation, unique category copy, Product and Review schema, fast mobile checkout and clean product feeds for Google Shopping. Stores are structured so both search engines and AI shopping assistants can read your catalogue accurately.",
-  hero: { image: "/images/ecommerce-dev-new.webp", imageAlt: "E-commerce Development — Shopify & WooCommerce | AVR Web Consulting illustration" },
+  hero: { image: seoConcept.url, imageAlt: "E-commerce store optimisation and analytics illustration" },
   highlights: [
     { label: "Build time", value: "5–7 weeks" },
     { label: "Product schema", value: "Full" },
@@ -248,19 +224,7 @@ export const ecommerceDevelopment: PageContent = {
     { label: "Global SEO", to: "/seo-services/global-seo" },
   ],
   sections: [
-    
     {
-      id: "key-takeaways",
-      heading: "Key Takeaways",
-      blocks: [
-        { kind: "list", items: [
-          "Expert strategies tailored for E-commerce Development — Shopify & WooCommerce",
-          "Data-driven approach without relying on guesswork",
-          "Focus on sustainable, long-term search visibility",
-          "Fully aligned with modern Answer Engine and AI search requirements"
-        ]}
-      ]
-    }, {
       id: "architecture",
       heading: "Catalogue architecture decides your ceiling",
       blocks: [
